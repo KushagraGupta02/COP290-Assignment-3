@@ -1,0 +1,315 @@
+.delete-account-child,
+.delete-account-inner,
+.delete-account-item {
+  position: absolute;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+}
+.delete-account-child {
+  top: 392px;
+  left: 671px;
+  width: 559px;
+  height: 420px;
+}
+.delete-account-inner,
+.delete-account-item {
+  top: 717px;
+  width: 92px;
+  height: 46px;
+  cursor: pointer;
+}
+.delete-account-item {
+  left: 805px;
+}
+.delete-account-inner {
+  left: 997px;
+}
+.icbaseline-message7 {
+  position: absolute;
+  top: 0;
+  left: 1351px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.group-child31 {
+  left: 0;
+  background-color: var(--color-indigo-100);
+  width: 262px;
+}
+.group-child31,
+.group-child32,
+.group-child33 {
+  position: absolute;
+  top: 0;
+  height: 44px;
+}
+.group-child32 {
+  left: 271px;
+  background-color: var(--color-indigo-300);
+  width: 360px;
+}
+.group-child33 {
+  left: 640px;
+  background-color: var(--color-indigo-200);
+  width: 711px;
+}
+.icbaseline-message-parent5,
+.mauve7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1375px;
+  height: 44px;
+}
+.mauve7 {
+  top: -27px;
+  left: -4px;
+  display: inline-block;
+  width: 251px;
+  height: 30px;
+  cursor: pointer;
+}
+.group-parent7 {
+  position: absolute;
+  top: 88px;
+  left: calc(50% - 553px);
+  width: 1351px;
+  height: 44px;
+  font-size: var(--font-size-45xl);
+  font-family: var(--font-caveat);
+}
+.delete-account-child1,
+.delete-account-child2 {
+  position: absolute;
+  top: 273px;
+  left: 62px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 266px;
+  height: 767px;
+}
+.delete-account-child2 {
+  height: 285px;
+}
+.delete-account-inner1,
+.frame-child13 {
+  position: absolute;
+  width: 226px;
+  height: 43px;
+}
+.frame-child13 {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+}
+.delete-account-inner1 {
+  top: 576px;
+  left: 83px;
+  cursor: pointer;
+}
+.delete-account-child3 {
+  top: 643px;
+}
+.delete-account-child3,
+.delete-account-child4,
+.delete-account-child5 {
+  position: absolute;
+  left: 83px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 226px;
+  height: 43px;
+  cursor: pointer;
+}
+.delete-account-child4 {
+  top: 711px;
+}
+.delete-account-child5 {
+  top: 778px;
+}
+.delete-account-child6 {
+  top: 846px;
+  cursor: pointer;
+}
+.delete-account-child6,
+.delete-account-child7,
+.delete-account-child8 {
+  position: absolute;
+  left: 83px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 226px;
+  height: 43px;
+}
+.delete-account-child7 {
+  top: 913px;
+  cursor: pointer;
+}
+.delete-account-child8 {
+  top: 981px;
+  border: 3px solid var(--color-white);
+  box-sizing: border-box;
+}
+.friends1 {
+  position: absolute;
+  top: 652px;
+  left: 123px;
+  display: inline-block;
+  width: 142px;
+  height: 27px;
+}
+.chats1 {
+  top: 718px;
+  left: 125px;
+  width: 142px;
+  height: 26px;
+}
+.chats1,
+.delete-account2,
+.help1,
+.logout1 {
+  position: absolute;
+  display: inline-block;
+}
+.help1,
+.logout1 {
+  height: 26px;
+}
+.premium1 {
+  left: 125px;
+  height: 26px;
+}
+.premium1,
+.settings1 {
+  position: absolute;
+  display: inline-block;
+}
+.help1,
+.premium1 {
+  width: 143px;
+}
+.premium1 {
+  top: 786px;
+}
+.help1 {
+  top: 854px;
+  left: 121px;
+}
+.logout1 {
+  top: 923px;
+  left: 116px;
+  width: 160px;
+}
+.delete-account2 {
+  top: 988px;
+  left: 103px;
+  width: 188px;
+  height: 34px;
+}
+.settings1 {
+  top: 585px;
+  left: 125px;
+  width: 142px;
+  height: 27px;
+}
+.group-icon19 {
+  position: absolute;
+  height: 17.14%;
+  width: 11.57%;
+  top: 3.67%;
+  right: 84.9%;
+  bottom: 79.19%;
+  left: 3.53%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  cursor: pointer;
+}
+.delete-account3 {
+  position: absolute;
+  top: 385px;
+  left: 653px;
+  font-size: var(--font-size-56xl);
+  font-family: var(--font-metal);
+  display: inline-block;
+  width: 596px;
+  height: 39px;
+}
+.delete-account-child9 {
+  position: absolute;
+  top: 537px;
+  left: 725px;
+  border-radius: var(--br-xl);
+  width: 451px;
+  height: 64px;
+}
+.delete-account-child10 {
+  position: absolute;
+  top: 690px;
+  left: 769px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.delete-account-child11 {
+  position: absolute;
+  top: 553px;
+  left: 930px;
+  width: 226px;
+  height: 33px;
+}
+.delete-account-child12 {
+  position: absolute;
+  top: 620px;
+  left: 736px;
+  border-radius: var(--br-3xs);
+  width: 420px;
+  height: 75px;
+}
+.password {
+  position: absolute;
+  top: 553px;
+  left: 761px;
+  font-weight: 300;
+  display: inline-block;
+  width: 142px;
+  height: 27px;
+}
+.yes {
+  top: 723px;
+  left: 780px;
+  width: 142px;
+}
+.are-you-sure,
+.no,
+.yes {
+  position: absolute;
+  font-weight: 300;
+  display: inline-block;
+  height: 27px;
+}
+.are-you-sure {
+  top: 631px;
+  left: 736px;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  width: 413px;
+}
+.no {
+  top: 723px;
+  left: 972px;
+  width: 142px;
+}
+.delete-account1 {
+  position: relative;
+  background-color: var(--color-mediumpurple-200);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}

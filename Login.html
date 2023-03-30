@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Metal:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cabin Condensed:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bruno Ace:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bilbo:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fjord:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="login">
+      <div class="group-parent26">
+        <div class="icbaseline-message-parent17">
+          <div class="icbaseline-message19"></div>
+          <div class="group-child107"></div>
+          <div class="group-child108"></div>
+          <div class="group-child109"></div>
+        </div>
+        <div class="mauve19" id="mauveText">mauve</div>
+      </div>
+      <div class="login-child"></div>
+      <div class="login-to-mauve">Login to mauve</div>
+      <div class="login-item" id="rectangle4"></div>
+      <div class="login-inner" id="rectangle5"></div>
+      <div class="forgot-your-password">forgot your password?</div>
+      <div class="new-to-mauve">new to mauve? SignUp</div>
+      <div class="login-child1" id="rectangle6"></div>
+      <div class="login1">Login</div>
+      <img class="login-child2" alt="" src="./public/rectangle-15.svg" /><img
+        class="login-child3"
+        alt=""
+        src="./public/rectangle-22.svg"
+      />
+      <div class="password3">Password</div>
+      <img class="group-icon31" alt="" src="./public/group25.svg" id="group" />
+      <div class="vector-parent">
+        <img class="frame-child50" alt="" src="./public/rectangle-15.svg" />
+        <div class="username2">Username</div>
+        <img class="frame-child51" alt="" src="./public/rectangle-22.svg" />
+      </div>
+    </div>
+
+    <script>
+      var mauveText = document.getElementById("mauveText");
+      if (mauveText) {
+        mauveText.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var rectangle4 = document.getElementById("rectangle4");
+      if (rectangle4) {
+        rectangle4.addEventListener("click", function (e) {
+          window.location.href = "./ForgotPassword.html";
+        });
+      }
+      
+      var rectangle5 = document.getElementById("rectangle5");
+      if (rectangle5) {
+        rectangle5.addEventListener("click", function (e) {
+          window.location.href = "./SignUp.html";
+        });
+      }
+      
+      var rectangle6 = document.getElementById("rectangle6");
+      if (rectangle6) {
+        rectangle6.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var group = document.getElementById("group");
+      if (group) {
+        group.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      </script>
+  </body>
+</html>

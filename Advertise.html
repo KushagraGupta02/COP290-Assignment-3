@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Advertise.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Metal:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cabin Condensed:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bruno Ace:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bilbo:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fjord:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="advertise">
+      <div class="advertise-child"></div>
+      <div class="advertise-item"></div>
+      <div class="advertise-inner"></div>
+      <div class="advertise-child1"></div>
+      <div class="advertise-child2"></div>
+      <div class="group-parent21">
+        <div class="icbaseline-message-parent12">
+          <div class="icbaseline-message14"></div>
+          <div class="group-child79"></div>
+          <div class="group-child80"></div>
+          <div class="group-child81"></div>
+        </div>
+        <div class="mauve14" id="mauveText">mauve</div>
+      </div>
+      <img class="group-icon26" alt="" src="./public/group20.svg" id="group" />
+      <div class="advertise-child3"></div>
+      <div class="advertise-child4"></div>
+      <div class="buy-now">Buy now!</div>
+      <div class="changebuy-plan">Change/Buy Plan</div>
+      <div class="advertise-child5"></div>
+      <div class="advertise-child6"></div>
+      <div class="rectangle-parent35" id="frameContainer1">
+        <div class="frame-child43"></div>
+        <div class="frame-child44"></div>
+        <div class="frame-child45"></div>
+        <div class="frame-child46"></div>
+        <div class="frame-child47"></div>
+      </div>
+      <div class="advertise-child7" id="rectangle16"></div>
+      <div class="advertise-child8" id="rectangle17"></div>
+      <div class="advertise-child9" id="rectangle18"></div>
+      <div class="help6">Help</div>
+      <div class="logout5">Logout</div>
+      <div class="withdraw">Withdraw</div>
+      <div class="settings5">Settings</div>
+      <div class="advertise-child10"></div>
+      <div class="upload-ads-mp3mp4gifpdf">Upload Ads (mp3/mp4/gif/pdf)</div>
+    </div>
+
+    <script>
+      var mauveText = document.getElementById("mauveText");
+      if (mauveText) {
+        mauveText.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var group = document.getElementById("group");
+      if (group) {
+        group.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var frameContainer1 = document.getElementById("frameContainer1");
+      if (frameContainer1) {
+        frameContainer1.addEventListener("click", function (e) {
+          window.location.href = "./AccountSettings.html";
+        });
+      }
+      
+      var rectangle16 = document.getElementById("rectangle16");
+      if (rectangle16) {
+        rectangle16.addEventListener("click", function (e) {
+          window.location.href = "./Help.html";
+        });
+      }
+      
+      var rectangle17 = document.getElementById("rectangle17");
+      if (rectangle17) {
+        rectangle17.addEventListener("click", function (e) {
+          window.location.href = "./Login.html";
+        });
+      }
+      
+      var rectangle18 = document.getElementById("rectangle18");
+      if (rectangle18) {
+        rectangle18.addEventListener("click", function (e) {
+          window.location.href = "./DeleteAccount.html";
+        });
+      }
+      </script>
+  </body>
+</html>

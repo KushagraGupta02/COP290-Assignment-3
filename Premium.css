@@ -1,0 +1,297 @@
+.premium-child {
+  top: 273px;
+  left: 361px;
+  width: 1301px;
+  height: 767px;
+}
+.premium-child,
+.premium-child1,
+.premium-child2,
+.premium-child3,
+.premium-child4,
+.premium-inner,
+.premium-item {
+  position: absolute;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+}
+.premium-inner,
+.premium-item {
+  top: 273px;
+}
+.premium-item {
+  height: 767px;
+}
+.premium-inner,
+.premium-item {
+  left: 62px;
+  width: 266px;
+}
+.premium-inner {
+  height: 285px;
+}
+.premium-child1 {
+  top: 380px;
+  left: 394px;
+  width: 593px;
+  height: 178px;
+}
+.premium-child2 {
+  left: 394px;
+}
+.premium-child2,
+.premium-child3,
+.premium-child4 {
+  width: 593px;
+  height: 178px;
+}
+.premium-child2 {
+  top: 600px;
+}
+.premium-child3 {
+  top: 598px;
+  left: 1027px;
+}
+.premium-child4 {
+  left: 1027px;
+  top: 380px;
+}
+.icbaseline-message15 {
+  position: absolute;
+  top: 0;
+  left: 1351px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.group-child82 {
+  left: 0;
+  background-color: var(--color-indigo-100);
+  width: 262px;
+}
+.group-child82,
+.group-child83,
+.group-child84 {
+  position: absolute;
+  top: 0;
+  height: 44px;
+}
+.group-child83 {
+  left: 271px;
+  background-color: var(--color-indigo-300);
+  width: 360px;
+}
+.group-child84 {
+  left: 640px;
+  background-color: var(--color-indigo-200);
+  width: 711px;
+}
+.icbaseline-message-parent13,
+.mauve15 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1375px;
+  height: 44px;
+}
+.mauve15 {
+  top: -27px;
+  left: -4px;
+  display: inline-block;
+  width: 251px;
+  height: 30px;
+  cursor: pointer;
+}
+.group-parent22 {
+  position: absolute;
+  top: 88px;
+  left: calc(50% - 553px);
+  width: 1351px;
+  height: 44px;
+  font-size: var(--font-size-45xl);
+  font-family: var(--font-caveat);
+}
+.group-icon27 {
+  position: absolute;
+  height: 17.14%;
+  width: 11.57%;
+  top: 3.67%;
+  right: 84.9%;
+  bottom: 79.19%;
+  left: 3.53%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  cursor: pointer;
+}
+.frame-child48 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 226px;
+  height: 43px;
+}
+.premium-inner1 {
+  position: absolute;
+  top: 576px;
+}
+.premium-child5,
+.premium-child6,
+.premium-inner1 {
+  left: 83px;
+  width: 226px;
+  height: 43px;
+  cursor: pointer;
+}
+.premium-child5 {
+  position: absolute;
+  top: 643px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+}
+.premium-child6 {
+  top: 711px;
+}
+.premium-child10,
+.premium-child6,
+.premium-child7,
+.premium-child8,
+.premium-child9 {
+  position: absolute;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+}
+.premium-child7 {
+  top: 776.5px;
+  left: 81.5px;
+  border: 3px solid var(--color-white);
+  box-sizing: border-box;
+  width: 229px;
+  height: 46px;
+}
+.premium-child10,
+.premium-child8,
+.premium-child9 {
+  left: 83px;
+  width: 226px;
+  height: 43px;
+  cursor: pointer;
+}
+.premium-child8,
+.premium-child9 {
+  top: 846px;
+}
+.premium-child9 {
+  top: 913px;
+}
+.premium-child10 {
+  top: 981px;
+}
+.friends6 {
+  position: absolute;
+  top: 652px;
+  left: 123px;
+  display: inline-block;
+  width: 142px;
+  height: 27px;
+}
+.chats6 {
+  top: 718px;
+  left: 125px;
+  width: 142px;
+  height: 26px;
+}
+.chats6,
+.delete-account7,
+.help7,
+.logout6 {
+  position: absolute;
+  display: inline-block;
+}
+.help7,
+.logout6 {
+  height: 26px;
+}
+.premium6 {
+  left: 125px;
+  height: 26px;
+}
+.premium6,
+.settings6 {
+  position: absolute;
+  display: inline-block;
+}
+.help7,
+.premium6 {
+  width: 143px;
+}
+.premium6 {
+  top: 786px;
+}
+.help7 {
+  top: 854px;
+  left: 121px;
+}
+.logout6 {
+  top: 923px;
+  left: 116px;
+  width: 160px;
+}
+.delete-account7 {
+  top: 988px;
+  left: 103px;
+  width: 188px;
+  height: 34px;
+}
+.settings6 {
+  top: 585px;
+  left: 125px;
+  width: 142px;
+  height: 27px;
+}
+.premium-child11,
+.premium-child12 {
+  position: absolute;
+  top: 949px;
+  left: 899px;
+  width: 226px;
+  height: 43px;
+}
+.premium-child12 {
+  top: 846px;
+  left: 816px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 391px;
+  height: 129px;
+}
+.buy-now1,
+.plans-and-pricing {
+  position: absolute;
+  top: 857px;
+  left: 840px;
+  font-size: var(--font-size-45xl);
+  display: inline-block;
+  width: 345px;
+  height: 154px;
+}
+.plans-and-pricing {
+  top: 299px;
+  left: 370px;
+  font-size: var(--font-size-29xl);
+  width: 466px;
+  height: 69px;
+}
+.premium5 {
+  position: relative;
+  background-color: var(--color-mediumpurple-200);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}

@@ -1,0 +1,359 @@
+.account-settings-child {
+  position: absolute;
+  top: 300px;
+  left: 381px;
+  border-radius: var(--br-xl);
+  width: 1250px;
+  height: 93px;
+}
+.account-settings-inner,
+.account-settings-item {
+  position: absolute;
+  top: 273px;
+  left: 62px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 266px;
+}
+.account-settings-item {
+  height: 767px;
+}
+.account-settings-inner {
+  height: 285px;
+}
+.icbaseline-message16 {
+  position: absolute;
+  top: 0;
+  left: 1351px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.group-child85 {
+  left: 0;
+  background-color: var(--color-indigo-100);
+  width: 262px;
+}
+.group-child85,
+.group-child86,
+.group-child87 {
+  position: absolute;
+  top: 0;
+  height: 44px;
+}
+.group-child86 {
+  left: 271px;
+  background-color: var(--color-indigo-300);
+  width: 360px;
+}
+.group-child87 {
+  left: 640px;
+  background-color: var(--color-indigo-200);
+  width: 711px;
+}
+.icbaseline-message-parent14,
+.mauve16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1375px;
+  height: 44px;
+}
+.mauve16 {
+  top: -27px;
+  left: -4px;
+  display: inline-block;
+  width: 251px;
+  height: 30px;
+  cursor: pointer;
+}
+.group-parent23 {
+  position: absolute;
+  top: 88px;
+  left: calc(50% - 553px);
+  width: 1351px;
+  height: 44px;
+  font-size: var(--font-size-45xl);
+  font-family: var(--font-caveat);
+}
+.account-settings-child1,
+.account-settings-child2 {
+  position: absolute;
+  top: 273px;
+  left: 361px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 1301px;
+  height: 767px;
+}
+.account-settings-child2 {
+  top: 319px;
+  left: 1446px;
+  width: 164px;
+  height: 59px;
+  cursor: pointer;
+}
+.change {
+  position: absolute;
+  top: 326px;
+  left: 1447px;
+  display: inline-block;
+  width: 159px;
+  height: 44px;
+}
+.account-settings-child3 {
+  position: absolute;
+  top: 415px;
+  left: 381px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 1250px;
+  height: 92px;
+}
+.password2 {
+  position: absolute;
+  top: 440px;
+  left: 205px;
+  display: inline-block;
+  width: 582px;
+  height: 55px;
+}
+.group-icon28 {
+  position: absolute;
+  height: 17.14%;
+  width: 11.57%;
+  top: 3.67%;
+  right: 84.9%;
+  bottom: 79.19%;
+  left: 3.53%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  cursor: pointer;
+}
+.username1 {
+  position: absolute;
+  top: 319px;
+  left: 211px;
+  display: inline-block;
+  width: 582px;
+  height: 55px;
+}
+.account-settings-child4 {
+  top: 324px;
+  height: 45px;
+}
+.account-settings-child4,
+.account-settings-child5 {
+  position: absolute;
+  left: 615px;
+  border-radius: var(--br-3xs);
+  width: 814px;
+}
+.frame-child49 {
+  position: absolute;
+}
+.account-settings-child5 {
+  top: 439px;
+  height: 42px;
+}
+.frame-child49 {
+  top: -1.5px;
+  left: -1.5px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  border: 3px solid var(--color-white);
+  box-sizing: border-box;
+  width: 229px;
+  height: 46px;
+}
+.account-settings-inner1 {
+  position: absolute;
+  top: 576px;
+  left: 83px;
+  width: 226px;
+  height: 43px;
+}
+.account-settings-child10,
+.account-settings-child11 {
+  position: absolute;
+  left: 83px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 226px;
+  height: 43px;
+  cursor: pointer;
+}
+.account-settings-child6 {
+  top: 643px;
+}
+.account-settings-child6,
+.account-settings-child7,
+.account-settings-child8,
+.account-settings-child9 {
+  position: absolute;
+  left: 83px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 226px;
+  height: 43px;
+  cursor: pointer;
+}
+.account-settings-child7 {
+  top: 711px;
+}
+.account-settings-child8 {
+  top: 778px;
+}
+.account-settings-child9 {
+  top: 846px;
+}
+.account-settings-child10 {
+  top: 913px;
+}
+.account-settings-child11 {
+  top: 981px;
+}
+.chats7 {
+  width: 142px;
+}
+.chats7,
+.delete-account8 {
+  position: absolute;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+}
+.friends7 {
+  top: 652px;
+  left: 123px;
+  width: 142px;
+  height: 27px;
+}
+.friends7,
+.help8,
+.logout7,
+.premium7,
+.settings7 {
+  position: absolute;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+}
+.chats7 {
+  top: 718px;
+  left: 125px;
+}
+.chats7,
+.help8,
+.logout7,
+.premium7 {
+  height: 26px;
+}
+.help8,
+.premium7 {
+  left: 121px;
+  width: 143px;
+}
+.premium7 {
+  top: 787px;
+}
+.help8 {
+  top: 854px;
+}
+.logout7 {
+  top: 923px;
+  left: 116px;
+  width: 160px;
+}
+.delete-account8 {
+  top: 988px;
+  left: 103px;
+  width: 188px;
+  height: 34px;
+}
+.settings7 {
+  top: 585px;
+  left: 125px;
+  width: 142px;
+  height: 27px;
+  cursor: pointer;
+}
+.account-settings-child12 {
+  position: absolute;
+  top: 431px;
+  left: 1446px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 164px;
+  height: 59px;
+  cursor: pointer;
+}
+.change1 {
+  position: absolute;
+  top: 438px;
+  left: 1447px;
+  display: inline-block;
+  width: 159px;
+  height: 44px;
+}
+.account-settings-child13 {
+  position: absolute;
+  top: 530px;
+  left: 382px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 602px;
+  height: 92px;
+}
+.theme {
+  position: absolute;
+  top: 555px;
+  left: 175px;
+  display: inline-block;
+  width: 582px;
+  height: 55px;
+}
+.account-settings-child14 {
+  position: absolute;
+  top: 548px;
+  left: 778px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 164px;
+  height: 59px;
+}
+.dark {
+  position: absolute;
+  top: 555px;
+  left: 779px;
+  display: inline-block;
+  width: 159px;
+  height: 44px;
+}
+.account-settings-child15 {
+  position: absolute;
+  top: 548px;
+  left: 598px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 164px;
+  height: 59px;
+}
+.light {
+  position: absolute;
+  top: 555px;
+  left: 599px;
+  display: inline-block;
+  width: 159px;
+  height: 44px;
+}
+.account-settings {
+  position: relative;
+  background-color: var(--color-mediumpurple-200);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-11xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}

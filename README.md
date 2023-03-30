@@ -1,9 +1,10 @@
-# COP290-Lab-3
-COP290 Lab-3 for Pomogrenade_Pi : Parth Patel, Kushagra Gupta, Harsh Vora, Rajat Golechha
 
+  # mauve
 
-Meeting logs -
-https://docs.google.com/spreadsheets/d/1NcBavuAo-wQEpI4pvCRjzR6YsR52Gx8xBxUwqtEsskI/edit#gid=0
+  Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
 
-Doc link -
-https://docs.google.com/document/d/1JB4BxzDNZywXRrxsUM7r5D-k-1S3uP2LwBetCJUiLt8/edit?usp=sharing
+  To preview and run the project on your device:
+  1) Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
+  2) In the terminal, run `npm install`
+  3) Run `npm start` to view project in browser
+  

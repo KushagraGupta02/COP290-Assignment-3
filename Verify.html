@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Verify.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Metal:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cabin Condensed:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bruno Ace:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bilbo:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fjord:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="verify">
+      <div class="group-parent12">
+        <div class="icbaseline-message-parent8">
+          <div class="icbaseline-message10"></div>
+          <div class="group-child52"></div>
+          <div class="group-child53"></div>
+          <div class="group-child54"></div>
+        </div>
+        <div class="mauve10" id="mauveText">mauve</div>
+      </div>
+      <div class="verify-child"></div>
+      <div class="verify-your-account">Verify your account</div>
+      <div class="verify-item" id="rectangle4"></div>
+      <div class="verify1">Verify</div>
+      <img class="verify-inner" alt="" src="./public/rectangle-19.svg" />
+      <div class="otp">OTP :</div>
+      <img class="group-icon22" alt="" src="./public/group16.svg" /><img
+        class="verify-child1"
+        alt=""
+        src="./public/rectangle-151.svg"
+      />
+      <div class="enter-the-six">
+        Enter the six digit OTP sent to your email address to verify your
+        account on mauve
+      </div>
+      <img class="verify-child2" alt="" src="./public/rectangle-20.svg" />
+    </div>
+
+    <script>
+      var mauveText = document.getElementById("mauveText");
+      if (mauveText) {
+        mauveText.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var rectangle4 = document.getElementById("rectangle4");
+      if (rectangle4) {
+        rectangle4.addEventListener("click", function (e) {
+          window.location.href = "./Login.html";
+        });
+      }
+      </script>
+  </body>
+</html>
