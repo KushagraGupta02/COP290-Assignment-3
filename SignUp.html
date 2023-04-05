@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./SignUp.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bruno Ace:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Smooch Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fjord:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Metal:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="sign-up">
+      <div class="group-parent15">
+        <div class="icbaseline-message-parent15">
+          <div class="icbaseline-message17"></div>
+          <div class="group-child58"></div>
+          <div class="group-child59"></div>
+          <div class="group-child60"></div>
+        </div>
+        <div class="mauve17" id="mauveText">mauve</div>
+      </div>
+      <div class="sign-up-child"></div>
+      <div class="sign-up1">Sign Up</div>
+      <div class="rectangle-parent28" id="groupContainer1">
+        <button class="group-child61" id="rectangleButton"></button>
+        <div class="create-account">Create account</div>
+      </div>
+      <img class="group-icon37" alt="" src="./public/group30.svg" /><button
+        class="rectangle-parent29"
+        id="frameButton"
+      >
+        <div class="frame-child66" id="rectangle4"></div>
+        <div class="already-have-an-container" id="alreadyHaveAn">
+          <p class="already-have-an">already have an account?</p>
+          <p class="already-have-an">sign in here</p>
+        </div>
+      </button>
+      <div class="vector-parent">
+        <img class="frame-child67" alt="" src="./public/rectangle-15.svg" />
+        <div class="name">Username</div>
+        <input class="frame-child68" type="text" placeholder="Username" />
+      </div>
+      <div class="vector-group">
+        <img class="frame-child69" alt="" src="./public/rectangle-15.svg" />
+        <div class="name">Password</div>
+        <input
+          class="frame-child70"
+          type="text"
+          placeholder="password"
+          minlength="{1}"
+          required
+        />
+      </div>
+      <div class="vector-container">
+        <img class="frame-child71" alt="" src="./public/rectangle-15.svg" />
+        <div class="name">Name</div>
+        <input
+          class="frame-child72"
+          type="text"
+          placeholder="your name"
+          minlength="{1}"
+          required
+        />
+      </div>
+      <div class="vector-parent1">
+        <img class="frame-child71" alt="" src="./public/rectangle-15.svg" />
+        <div class="phone-no">Phone No.</div>
+        <input
+          class="frame-child74"
+          type="text"
+          placeholder="mobile number"
+          maxlength="{10}"
+          minlength="{10}"
+          required
+        />
+      </div>
+      <div class="vector-parent2">
+        <img class="frame-child75" alt="" src="./public/rectangle-15.svg" />
+        <div class="name">Email ID</div>
+        <input
+          class="frame-child76"
+          type="text"
+          placeholder="email"
+          minlength="{1}"
+          required
+        />
+      </div>
+    </div>
+
+    <script>
+      var mauveText = document.getElementById("mauveText");
+      if (mauveText) {
+        mauveText.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var rectangleButton = document.getElementById("rectangleButton");
+      if (rectangleButton) {
+        rectangleButton.addEventListener("click", function (e) {
+          window.location.href = "./Verify.html";
+        });
+      }
+      
+      var groupContainer1 = document.getElementById("groupContainer1");
+      if (groupContainer1) {
+        groupContainer1.addEventListener("click", function (e) {
+          window.location.href = "./Verify.html";
+        });
+      }
+      
+      var rectangle4 = document.getElementById("rectangle4");
+      if (rectangle4) {
+        rectangle4.addEventListener("click", function (e) {
+          window.location.href = "./Login.html";
+        });
+      }
+      
+      var alreadyHaveAn = document.getElementById("alreadyHaveAn");
+      if (alreadyHaveAn) {
+        alreadyHaveAn.addEventListener("click", function (e) {
+          window.location.href = "./Login.html";
+        });
+      }
+      
+      var frameButton = document.getElementById("frameButton");
+      if (frameButton) {
+        frameButton.addEventListener("click", function (e) {
+          window.location.href = "./Login.html";
+        });
+      }
+      </script>
+  </body>
+</html>

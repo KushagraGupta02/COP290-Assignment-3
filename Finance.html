@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Finance.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bruno Ace:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Smooch Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fjord:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Metal:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="finance6">
+      <div class="group-parent4">
+        <div class="icbaseline-message-parent5">
+          <div class="icbaseline-message7"></div>
+          <button class="group-child22"></button>
+          <div class="group-child23"></div>
+          <div class="group-child24"></div>
+        </div>
+        <div class="sign-out6" id="signOutContainer">
+          <img class="vector-icon38" alt="" src="./public/vector.svg" /><img
+            class="vector-icon39"
+            alt=""
+            src="./public/vector12.svg"
+          /><img class="vector-icon40" alt="" src="./public/vector2.svg" />
+        </div>
+        <img
+          class="my-profile-icon6"
+          alt=""
+          src="./public/my-profile.svg"
+          id="myProfileIcon"
+        />
+        <div class="mauve7" id="mauveText">mauve</div>
+      </div>
+      <div class="finance-child" id="rectangle2"></div>
+      <div class="finance-item" id="rectangle3"></div>
+      <button class="finance-inner"></button
+      ><button class="finance-child1" id="rectangleButton2"></button
+      ><button class="finance-child2" id="rectangleButton3"></button
+      ><button class="finance-child3" id="rectangleButton4"></button
+      ><button class="finance-child4" id="rectangleButton5"></button>
+      <div class="trending5" id="trendingText">Trending</div>
+      <div class="sports6" id="sportsText">Sports</div>
+      <div class="finance7">Finance</div>
+      <div class="stem7" id="sTEMText">STEM</div>
+      <div class="travel7" id="travelText">Travel</div>
+      <div class="entertainment7" id="entertainmentText">Entertainment</div>
+      <div class="miscellanous5" id="miscellanousText">Miscellanous</div>
+      <a class="group5" id="group"
+        ><img class="group-icon17" alt="" src="./public/group13.svg" /></a
+      ><img class="finance-child5" alt="" src="./public/group-33.svg" /><img
+        class="vector-icon41"
+        alt=""
+        src="./public/vector3.svg"
+      /><img class="vector-icon42" alt="" src="./public/vector4.svg" /><img
+        class="vector-icon43"
+        alt=""
+        src="./public/vector5.svg"
+      /><img class="vector-icon44" alt="" src="./public/vector6.svg" /><img
+        class="group-icon18"
+        alt=""
+        src="./public/group1.svg"
+      /><img class="group-icon19" alt="" src="./public/group12.svg" />
+      <div class="finance-child6"></div>
+      <div class="rectangle-parent9">
+        <img
+          class="frame-child17"
+          alt=""
+          src="./public/rectangle-442@2x.png"
+        /><img
+          class="frame-child18"
+          alt=""
+          src="./public/rectangle-393@2x.png"
+        /><img
+          class="frame-child19"
+          alt=""
+          src="./public/rectangle-423@2x.png"
+        /><img
+          class="frame-child20"
+          alt=""
+          src="./public/rectangle-433@2x.png"
+        />
+      </div>
+    </div>
+
+    <script>
+      var signOutContainer = document.getElementById("signOutContainer");
+      if (signOutContainer) {
+        signOutContainer.addEventListener("click", function (e) {
+          window.location.href = "./Login.html";
+        });
+      }
+      
+      var myProfileIcon = document.getElementById("myProfileIcon");
+      if (myProfileIcon) {
+        myProfileIcon.addEventListener("click", function (e) {
+          window.location.href = "./AccountSettings.html";
+        });
+      }
+      
+      var mauveText = document.getElementById("mauveText");
+      if (mauveText) {
+        mauveText.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var rectangle2 = document.getElementById("rectangle2");
+      if (rectangle2) {
+        rectangle2.addEventListener("click", function (e) {
+          window.location.href = "./Trending.html";
+        });
+      }
+      
+      var rectangle3 = document.getElementById("rectangle3");
+      if (rectangle3) {
+        rectangle3.addEventListener("click", function (e) {
+          window.location.href = "./Sports.html";
+        });
+      }
+      
+      var rectangleButton2 = document.getElementById("rectangleButton2");
+      if (rectangleButton2) {
+        rectangleButton2.addEventListener("click", function (e) {
+          window.location.href = "./STEM.html";
+        });
+      }
+      
+      var rectangleButton3 = document.getElementById("rectangleButton3");
+      if (rectangleButton3) {
+        rectangleButton3.addEventListener("click", function (e) {
+          window.location.href = "./Travel.html";
+        });
+      }
+      
+      var rectangleButton4 = document.getElementById("rectangleButton4");
+      if (rectangleButton4) {
+        rectangleButton4.addEventListener("click", function (e) {
+          window.location.href = "./Entertainment.html";
+        });
+      }
+      
+      var rectangleButton5 = document.getElementById("rectangleButton5");
+      if (rectangleButton5) {
+        rectangleButton5.addEventListener("click", function (e) {
+          window.location.href = "./Miscellaneous.html";
+        });
+      }
+      
+      var trendingText = document.getElementById("trendingText");
+      if (trendingText) {
+        trendingText.addEventListener("click", function (e) {
+          window.location.href = "./Trending.html";
+        });
+      }
+      
+      var sportsText = document.getElementById("sportsText");
+      if (sportsText) {
+        sportsText.addEventListener("click", function (e) {
+          window.location.href = "./Sports.html";
+        });
+      }
+      
+      var sTEMText = document.getElementById("sTEMText");
+      if (sTEMText) {
+        sTEMText.addEventListener("click", function (e) {
+          window.location.href = "./STEM.html";
+        });
+      }
+      
+      var travelText = document.getElementById("travelText");
+      if (travelText) {
+        travelText.addEventListener("click", function (e) {
+          window.location.href = "./Travel.html";
+        });
+      }
+      
+      var entertainmentText = document.getElementById("entertainmentText");
+      if (entertainmentText) {
+        entertainmentText.addEventListener("click", function (e) {
+          window.location.href = "./Entertainment.html";
+        });
+      }
+      
+      var miscellanousText = document.getElementById("miscellanousText");
+      if (miscellanousText) {
+        miscellanousText.addEventListener("click", function (e) {
+          window.location.href = "./Miscellaneous.html";
+        });
+      }
+      
+      var group = document.getElementById("group");
+      if (group) {
+        group.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      </script>
+  </body>
+</html>

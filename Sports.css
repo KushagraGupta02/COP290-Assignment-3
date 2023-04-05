@@ -1,0 +1,398 @@
+.icbaseline-message8 {
+  position: absolute;
+  top: 0;
+  left: 1351px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.group-child25 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-indigo-100);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 262px;
+  height: 44px;
+}
+.group-child26,
+.group-child27 {
+  position: absolute;
+  top: 0;
+  left: 271px;
+  background-color: var(--color-indigo-300);
+  width: 360px;
+  height: 44px;
+}
+.group-child27 {
+  left: 640px;
+  background-color: var(--color-indigo-200);
+  width: 711px;
+}
+.icbaseline-message-parent6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1375px;
+  height: 44px;
+}
+.vector-icon45 {
+  width: 18.08px;
+  height: 2.58px;
+}
+.vector-icon45,
+.vector-icon46,
+.vector-icon47 {
+  position: relative;
+  flex-shrink: 0;
+}
+.vector-icon46 {
+  width: 9.04px;
+  height: 15.5px;
+}
+.vector-icon47 {
+  width: 10.33px;
+  height: 25.83px;
+}
+.sign-out7 {
+  position: absolute;
+  top: 6px;
+  left: 1302px;
+  box-shadow: 0 5.166666507720947px 5.17px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 3.875px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mauve8,
+.my-profile-icon7 {
+  position: absolute;
+  cursor: pointer;
+}
+.my-profile-icon7 {
+  height: 58.24%;
+  width: 1.7%;
+  top: 20.45%;
+  right: 4.37%;
+  bottom: 21.31%;
+  left: 93.93%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.mauve8 {
+  top: -27px;
+  left: -4px;
+  display: inline-block;
+  width: 251px;
+  height: 30px;
+}
+.group-parent5 {
+  position: absolute;
+  top: 88px;
+  left: calc(50% - 553px);
+  width: 1351px;
+  height: 44px;
+  font-size: var(--font-size-45xl);
+  font-family: var(--font-caveat);
+}
+.sports-child,
+.sports-item {
+  padding: 0;
+  background-color: var(--color-indigo-300);
+  border-radius: var(--br-xl);
+}
+.sports-child {
+  cursor: pointer;
+  border: 0;
+  position: absolute;
+  top: 327px;
+  left: 64px;
+  width: 253px;
+  height: 64px;
+}
+.sports-item {
+  border: 5px solid var(--color-gold);
+  top: 422px;
+  left: 59px;
+  box-sizing: border-box;
+  width: 263px;
+  height: 74px;
+}
+.sports-child1,
+.sports-inner,
+.sports-item {
+  cursor: pointer;
+  position: absolute;
+}
+.sports-inner {
+  border: 0;
+  padding: 0;
+  background-color: var(--color-indigo-300);
+  top: 528px;
+  left: 64px;
+  border-radius: var(--br-xl);
+  width: 253px;
+  height: 64px;
+}
+.sports-child1 {
+  top: 628px;
+}
+.sports-child1,
+.sports-child2,
+.sports-child3 {
+  border: 0;
+  padding: 0;
+  background-color: var(--color-indigo-300);
+  left: 64px;
+  border-radius: var(--br-xl);
+  width: 253px;
+  height: 64px;
+}
+.sports-child2 {
+  cursor: pointer;
+  position: absolute;
+  top: 729px;
+}
+.sports-child3 {
+  top: 830px;
+}
+.sports-child3,
+.sports-child4,
+.trending6 {
+  position: absolute;
+  cursor: pointer;
+}
+.sports-child4 {
+  border: 0;
+  padding: 0;
+  background-color: var(--color-indigo-300);
+  top: 931px;
+  left: 64px;
+  border-radius: var(--br-xl);
+  width: 253px;
+  height: 64px;
+}
+.entertainment8,
+.trending6 {
+  display: inline-block;
+  height: 39px;
+}
+.trending6 {
+  top: 344px;
+  left: 106px;
+  width: 158px;
+}
+.entertainment8 {
+  position: absolute;
+}
+.finance8 {
+  width: 158px;
+}
+.finance8,
+.miscellanous6 {
+  position: absolute;
+  display: inline-block;
+  height: 39px;
+}
+.sports8 {
+  top: 443px;
+  left: 93px;
+  width: 158px;
+}
+.sports8,
+.stem8,
+.travel8 {
+  position: absolute;
+  display: inline-block;
+  height: 39px;
+}
+.entertainment8 {
+  cursor: pointer;
+}
+.finance8 {
+  top: 545px;
+  left: 102px;
+}
+.finance8,
+.miscellanous6,
+.stem8,
+.travel8 {
+  cursor: pointer;
+}
+.stem8,
+.travel8 {
+  top: 644px;
+  left: 89px;
+  width: 159px;
+}
+.travel8 {
+  top: 743px;
+}
+.entertainment8 {
+  top: 847px;
+  left: 128px;
+  width: 181px;
+}
+.miscellanous6 {
+  width: 181px;
+  top: 947px;
+  left: 120px;
+}
+.group-icon20 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.group6 {
+  text-decoration: none;
+  position: absolute;
+  height: 17.14%;
+  width: 11.57%;
+  top: 3.67%;
+  right: 84.9%;
+  bottom: 79.19%;
+  left: 3.53%;
+  cursor: pointer;
+}
+.sports-child5 {
+  height: 3.31%;
+  width: 1.9%;
+  top: 30.26%;
+  right: 93.47%;
+  bottom: 66.43%;
+  left: 4.63%;
+}
+.group-icon21,
+.group-icon22,
+.sports-child5,
+.vector-icon48 {
+  position: absolute;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vector-icon48 {
+  top: 48.52%;
+  right: 93.4%;
+  bottom: 48.52%;
+  left: 4.69%;
+}
+.vector-icon48,
+.vector-icon49 {
+  height: 2.95%;
+  width: 1.91%;
+}
+.vector-icon49,
+.vector-icon50,
+.vector-icon51 {
+  position: absolute;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vector-icon49 {
+  top: 39.66%;
+  right: 93.46%;
+  bottom: 57.39%;
+  left: 4.63%;
+}
+.vector-icon50 {
+  height: 3.47%;
+  width: 1.68%;
+  top: 56.94%;
+  right: 93.52%;
+  bottom: 39.6%;
+  left: 4.8%;
+}
+.vector-icon51 {
+  height: 3.88%;
+  width: 2.37%;
+  top: 66.07%;
+  right: 93.17%;
+  bottom: 30.05%;
+  left: 4.46%;
+}
+.group-icon21 {
+  height: 3.66%;
+  width: 2.36%;
+  top: 75.25%;
+  right: 93.15%;
+  bottom: 21.09%;
+  left: 4.49%;
+}
+.group-icon22 {
+  height: 3.62%;
+  width: 2.08%;
+  top: 84.31%;
+  right: 93.3%;
+  bottom: 12.06%;
+  left: 4.62%;
+}
+.sports-child6 {
+  position: absolute;
+  top: 276px;
+  left: 349px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 1301px;
+  height: 767px;
+}
+.frame-child21 {
+  position: relative;
+  width: 1140px;
+  height: 541px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.frame-child22 {
+  width: 1140px;
+}
+.frame-child22,
+.frame-child23 {
+  position: relative;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.frame-child22 {
+  height: 312px;
+}
+.frame-child23 {
+  width: 1141px;
+  height: 911px;
+}
+.rectangle-parent10 {
+  position: absolute;
+  top: 312px;
+  left: 431px;
+  width: 1140px;
+  height: 699px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.sports7 {
+  position: relative;
+  background-color: var(--color-mediumpurple-100);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}

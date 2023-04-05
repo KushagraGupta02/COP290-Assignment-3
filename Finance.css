@@ -1,0 +1,371 @@
+.icbaseline-message7 {
+  position: absolute;
+  top: 0;
+  left: 1351px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.group-child22 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-indigo-100);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 262px;
+  height: 44px;
+}
+.group-child23,
+.group-child24 {
+  position: absolute;
+  top: 0;
+  left: 271px;
+  background-color: var(--color-indigo-300);
+  width: 360px;
+  height: 44px;
+}
+.group-child24 {
+  left: 640px;
+  background-color: var(--color-indigo-200);
+  width: 711px;
+}
+.icbaseline-message-parent5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1375px;
+  height: 44px;
+}
+.vector-icon38 {
+  width: 18.08px;
+  height: 2.58px;
+}
+.vector-icon38,
+.vector-icon39,
+.vector-icon40 {
+  position: relative;
+  flex-shrink: 0;
+}
+.vector-icon39 {
+  width: 9.04px;
+  height: 15.5px;
+}
+.vector-icon40 {
+  width: 10.33px;
+  height: 25.83px;
+}
+.sign-out6 {
+  top: 6px;
+  left: 1302px;
+  box-shadow: 0 5.166666507720947px 5.17px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 3.875px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mauve7,
+.my-profile-icon6,
+.sign-out6 {
+  position: absolute;
+  cursor: pointer;
+}
+.my-profile-icon6 {
+  height: 58.24%;
+  width: 1.7%;
+  top: 20.45%;
+  right: 4.37%;
+  bottom: 21.31%;
+  left: 93.93%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.mauve7 {
+  top: -27px;
+  left: -4px;
+  display: inline-block;
+  width: 251px;
+  height: 30px;
+}
+.group-parent4 {
+  position: absolute;
+  top: 88px;
+  left: calc(50% - 553px);
+  width: 1351px;
+  height: 44px;
+  font-size: var(--font-size-45xl);
+  font-family: var(--font-caveat);
+}
+.finance-child {
+  top: 327px;
+  left: 64px;
+  width: 253px;
+  height: 64px;
+}
+.finance-child,
+.finance-child1,
+.finance-child2,
+.finance-child3,
+.finance-child4,
+.finance-inner,
+.finance-item {
+  cursor: pointer;
+  background-color: var(--color-indigo-300);
+  position: absolute;
+  border-radius: var(--br-xl);
+}
+.finance-item {
+  top: 427px;
+  left: 64px;
+  width: 253px;
+  height: 64px;
+}
+.finance-child1,
+.finance-child2,
+.finance-child3,
+.finance-child4,
+.finance-inner {
+  padding: 0;
+}
+.finance-inner {
+  border: 5px solid var(--color-gold);
+  top: 523px;
+  left: 59px;
+  box-sizing: border-box;
+  width: 263px;
+  height: 74px;
+}
+.finance-child1 {
+  top: 628px;
+}
+.finance-child1,
+.finance-child2,
+.finance-child3,
+.finance-child4 {
+  border: 0;
+  left: 64px;
+  width: 253px;
+  height: 64px;
+}
+.finance-child2 {
+  top: 729px;
+}
+.finance-child3 {
+  top: 830px;
+}
+.finance-child4 {
+  top: 931px;
+}
+.sports6,
+.trending5 {
+  position: absolute;
+  display: inline-block;
+  width: 158px;
+  height: 39px;
+  cursor: pointer;
+}
+.trending5 {
+  top: 344px;
+  left: 106px;
+}
+.sports6 {
+  top: 443px;
+  left: 93px;
+}
+.entertainment7 {
+  position: absolute;
+  display: inline-block;
+  height: 39px;
+}
+.finance7 {
+  top: 545px;
+  left: 102px;
+  width: 158px;
+}
+.finance7,
+.miscellanous5,
+.stem7,
+.travel7 {
+  position: absolute;
+  display: inline-block;
+  height: 39px;
+}
+.entertainment7,
+.miscellanous5 {
+  cursor: pointer;
+}
+.stem7,
+.travel7 {
+  top: 644px;
+  left: 89px;
+  width: 159px;
+  cursor: pointer;
+}
+.travel7 {
+  top: 743px;
+}
+.entertainment7 {
+  top: 847px;
+  left: 128px;
+  width: 181px;
+}
+.miscellanous5 {
+  width: 181px;
+  top: 947px;
+  left: 120px;
+}
+.group-icon17 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.group5 {
+  text-decoration: none;
+  position: absolute;
+  height: 17.14%;
+  width: 11.57%;
+  top: 3.67%;
+  right: 84.9%;
+  bottom: 79.19%;
+  left: 3.53%;
+  cursor: pointer;
+}
+.finance-child5 {
+  height: 3.31%;
+  width: 1.9%;
+  top: 30.26%;
+  right: 93.47%;
+  bottom: 66.43%;
+  left: 4.63%;
+}
+.finance-child5,
+.group-icon18,
+.group-icon19,
+.vector-icon41 {
+  position: absolute;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vector-icon41 {
+  top: 48.52%;
+  right: 93.4%;
+  bottom: 48.52%;
+  left: 4.69%;
+}
+.vector-icon41,
+.vector-icon42 {
+  height: 2.95%;
+  width: 1.91%;
+}
+.vector-icon42,
+.vector-icon43,
+.vector-icon44 {
+  position: absolute;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vector-icon42 {
+  top: 39.66%;
+  right: 93.46%;
+  bottom: 57.39%;
+  left: 4.63%;
+}
+.vector-icon43 {
+  height: 3.47%;
+  width: 1.68%;
+  top: 56.94%;
+  right: 93.52%;
+  bottom: 39.6%;
+  left: 4.8%;
+}
+.vector-icon44 {
+  height: 3.88%;
+  width: 2.37%;
+  top: 66.07%;
+  right: 93.17%;
+  bottom: 30.05%;
+  left: 4.46%;
+}
+.group-icon18 {
+  height: 3.66%;
+  width: 2.36%;
+  top: 75.25%;
+  right: 93.15%;
+  bottom: 21.09%;
+  left: 4.49%;
+}
+.group-icon19 {
+  height: 3.62%;
+  width: 2.08%;
+  top: 84.31%;
+  right: 93.3%;
+  bottom: 12.06%;
+  left: 4.62%;
+}
+.finance-child6 {
+  position: absolute;
+  top: 271px;
+  left: 342px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-indigo-300);
+  width: 1301px;
+  height: 767px;
+}
+.frame-child17 {
+  height: 250px;
+}
+.frame-child17,
+.frame-child18,
+.frame-child19,
+.frame-child20 {
+  position: relative;
+  width: 1140px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.frame-child18 {
+  height: 425px;
+}
+.frame-child19 {
+  height: 235px;
+}
+.frame-child20 {
+  height: 327px;
+}
+.rectangle-parent9 {
+  position: absolute;
+  top: 312px;
+  left: 431px;
+  width: 1140px;
+  height: 699px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.finance6 {
+  position: relative;
+  background-color: var(--color-mediumpurple-100);
+  width: 100%;
+  height: 1117px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
