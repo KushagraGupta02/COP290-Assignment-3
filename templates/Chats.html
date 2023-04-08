@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/chats.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    </head>
+
+    <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="topnav" id="myTopnav">
+          <a href="./index.html" >Home</a>
+          <a href="./Friendsp.html">Friends</a>
+          <a href="./Sports.html">Sports</a>
+          <a href="./Finance.html">Finance</a>
+          <a href="./STEM.html">STEM</a>
+          <a href="./Travel.html">Travel</a>
+          <a href="./Entertainment.html">Entertainment</a>
+          <a href="./Miscellaneous.html">Others</a>
+          <a href="./accountsettings.html" class="active">Settings</a>
+    
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <div class="topnav2" id="myTopnav2">
+            <a href="./settings"  >Account Settings</a>
+            <a href="./manageFriends">Manage Friends</a>
+            <a href="./chats" class="active">Chats</a>
+            <a href="./premium">Premium</a>
+            <a href="./help">Help</a>
+            <a href="./logout">Logout</a>
+            <a href="./delete">Delete Account</a>
+      
+            <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+    
+        <div class="window" >
+            <div class="contain">
+            <div class="loadmore" id="loadmore">
+                <button class="loadmore2" role="button" id="loadmore2">Load more</button>
+            </div>
+            </div>
+            <div class="leftmsg" id="msg1">
+                <p><h3>Friend A</h3></p>
+                <p> Lorem ipsum dolor sit amet, </p>
+            </div>
+            <div class="rightmsg" id="msg2">
+                <p><h3>You </h3></p>
+                <p> consectetur adipiscing elit. </p>
+            </div>
+            <div class="leftmsg" id="msg1">
+                <p><h3>Friend A</h3></p>
+                <p> Maecenas id aliquam ante. </p>
+            </div>
+            <div class="rightmsg" id="msg2">
+                <p><h3>You </h3></p>
+                <p> Donec iaculis risus a erat posuere, </p>
+            </div>
+            <div class="rightmsg" id="msg2">
+                <p><h3>You </h3></p>
+                <p> non scelerisque est luctus. </p>
+            </div>
+            <div class="leftmsg" id="msg1">
+                <p><h3>Friend A</h3></p>
+                <p>Morbi eros enim, laoreet id accumsan vitae, tincidunt vel ligula. Suspendisse molestie, turpis a gravida pharetra, nisl nibh pellentesque eros, sed mattis ante mauris ut erat. Praesent porta, nibh quis hendrerit dignissim, ipsum elit elementum lectus, sed molestie lectus dolor ut quam. Vestibulum at magna vitae metus commodo tincidunt. Cras pulvinar id dui a sagittis. Mauris hendrerit velit ut imperdiet volutpat. Nulla facilisi. Nulla tincidunt tincidunt elit, ut tincidunt ligula faucibus id. Donec porta justo sed efficitur convallis. Donec bibendum nisl eu ex placerat, in ullamcorper quam gravida. In hac habitasse platea dictumst. Nullam elit mauris, tincidunt non sapien nec, consequat tincidunt felis. Suspendisse sem nisi, imperdiet id enim ac, bibendum feugiat dolor. </p>
+            </div>
+            <div class="newmsg">
+                <input type="text" class="msgbox" placeholder="Type a message" name="msg">
+                <button class="send" id="send" role="button">Send</button>
+            </div>
+        </div>
+        <script>
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+          function myFunction2() {
+            var x = document.getElementById("myTopnav2");
+            if (x.className === "topnav2") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav2";
+            }
+          }
+
+          var loadmore2 = document.getElementById("loadmore2");
+          if (loadmore2) {
+            loadmore2.addEventListener("click", function (e) {
+            });
+          }
+
+          var loadmore = document.getElementById("loadmore");
+          if (loadmore) {
+            loadmore.addEventListener("click", function (e) {
+            });
+          }
+
+          var send = document.getElementById("send");
+          if (send) {
+            send.addEventListener("click", function (e) {
+            });
+          }
+        </script>
+    </body>
+    
+    </html>

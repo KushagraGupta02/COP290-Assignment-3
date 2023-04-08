@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/NewPost.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    </head>
+    <body bgcolor="CAA8F5">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="topnav" id="myTopnav">
+          <a href="./home" >Home</a>
+          <a href="./friends" >Friends</a>
+          <a href="./sports">Sports</a>
+          <a href="./finance">Finance</a>
+          <a href="./stem">STEM</a>
+          <a href="./travel">Travel</a>
+          <a href="./entertainment">Entertainment</a>
+          <a href="./others">Others</a>
+          <a href="./settings">Settings</a>
+  
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+          <div class="rectangle1" id="rectangle1">
+            <form method="POST" action="/addPost">
+                <div class="titlebox" id="titlebox">
+                <br>
+                <label for="title">Title: </label>
+                <input type="text" class="title" id="title" name="title" placeholder=" Title for your post" maxlength="100">
+                <br>
+                </div>
+                <div class="categories" id="categories">
+                <label for="lang">Category</label>
+                <select name="category" id="lang">
+                <option value="Miscellaneous">Miscellaneous</option>
+                <option value="Sports">Sports</option>
+                <option value="Finance">Finance</option>
+                <option value="STEM">STEM</option>
+                <option value="Travel">Travel</option>
+                <option value="Entertainment">Entertainment</option>
+                </select>
+                <br>
+                </div>
+                <div class="contentbox" id="contentbox">
+                <label for="content">Content: </label>
+                <div class="flexcontainer">
+                <textarea id="content" class="content" name="content" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus auctor nisi semper pharetra. Maecenas tristique, nibh et fringilla pellentesque, nunc quam feugiat eros, vel tristique lorem elit vitae diam. Donec aliquam facilisis magna, eu luctus risus molestie quis. Donec odio nulla, aliquet eu ultricies sit amet, faucibus sed velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce non enim non magna semper pulvinar. Mauris quis pulvinar felis, sed luctus ex. Aenean id accumsan nunc. Cras aliquet leo in augue tristique posuere. Nunc feugiat diam ut ante feugiat vulputate. Donec ligula neque, fringilla sit amet condimentum ac, consectetur sed justo. Pellentesque id nisl cursus, cursus dolor non, volutpat diam. Aliquam varius feugiat velit, ac aliquam leo. Fusce quam nulla, vehicula ut fermentum et, suscipit vitae odio. Etiam dapibus semper mi eu eleifend. Aenean blandit elementum massa, eget commodo purus cursus vitae. Nunc ut volutpat arcu, eget condimentum ante. Proin lacinia non dui in hendrerit. Fusce vel felis non massa tincidunt imperdiet." style="height:77%" maxlength="1000"></textarea>
+                <br>
+                </div>
+                </div>
+            
+              <div class="abortorpost" id="abortpost">
+                <button class="Abort" id="Abort" role="button">Abort</button>
+                <button class="Post" id="Post" type="submit" >Post</button>
+              </div>
+            </form>
+          </div>
+            
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
+
+              var Abort = document.getElementById("Abort");
+              if (Abort) {
+                Abort.addEventListener("click", function (e) {
+                  window.location.href = "./home";
+                });
+              }
+
+              // var Post = document.getElementById("Post");
+              // if (Post) {
+              //   Post.addEventListener("click", function (e) {
+              //     window.location.href = "./index.html";
+              //   });
+              // }
+
+        </script>
+    </body>
+</html>

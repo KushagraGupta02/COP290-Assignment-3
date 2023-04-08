@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Add image */
+    background-image: url("../images/chatbg1.jpg");
+
+    /* Make image center */
+    background-position: center center;
+
+    /* Make image fixed */
+    background-attachment: fixed;
+
+    /* Not repeat images */
+    background-repeat: no-repeat;
+
+    /* Set background size auto */
+    background-size: cover;
+    overflow: scroll;
+    
+  }
+
+.wrapper {
+    
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 8px 13px 20px #d1cbd0, -8px -13px 20px rgb(126, 94, 170);
+}
+
+.place{
+    
+    max-width: 350px;
+    min-height: 50px;
+    margin: 30px auto;
+    padding: 20px 20px 20px 20px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.logo {
+    width: 80px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0%;
+}
+
+.wrapper .name {
+    
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+    /* border: 1px solid red; */
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+    box-shadow: inset 2px 2px 2px #cbced1, inset -2px -2px 2px #fff;
+}
+
+.wrapper .form-field .fas {
+    color: #555;
+}
+
+.wrapper .btn {
+    font-size: 1.0rem;
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #5823AE;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+    background-color: #5823AE;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: #5823AE;
+}
+
+.wrapper a:hover {
+    color: #5823AE;
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+    }
+}
+body {
+    background-color: #CAA8F5;
+  }
+
+  /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #D81E5B;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 865px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 865px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+ /* Add a black background color to the top navigation */
+ .topnav2 {
+    background-color: #D81E5B;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav2 a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav2 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav2 a.active {
+    color: #Ddd;
+    background-color: #1c6e8c;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav2 .icon {
+    display: none;
+  }
+
+.window {
+    width: 55%;
+    height: fit-content;
+    background-color: #5b30a2;
+    margin-top: 30px;
+    margin-left: 22.5%;
+    margin-bottom: 35px;
+    padding: 12px;
+    padding-bottom: 5px;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow:  2px 2px 6px #ffe838,
+                 -2px -2px 6px #ffc414;
+}
+
+.contain{
+    padding: 5px;
+    display: flex;
+    width:100%;
+    justify-content: center;
+    margin-bottom: 15px;
+
+}
+
+
+/* CSS */
+.loadmore {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 0.8rem;
+    line-height: 23px;
+    outline: none;
+    padding: .5rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .loadmore:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+  }
+  
+  .loadmore:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+
+  .loadmore2 {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 0.8rem;
+    line-height: 23px;
+    outline: none;
+    padding: .5rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .loadmore2:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+  }
+  
+  .loadmore2:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+  
+  .leftmsg {
+    background-color: #f5ff89;
+    width: 75%;
+    border-radius: 15px;
+    border-color: #333;
+    border-style: solid;
+    padding: 8px;
+    margin-left: 5px;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .rightmsg {
+    background-color: lightblue;
+    width: 75%;
+    border-radius: 15px;
+    border-color: #333;
+    border-style: solid;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  .newmsg {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    border-top: #333;
+    border-style: solid;
+    padding: 3px;
+    background-color: #fff;
+  }
+  .msgbox{
+    width: 85%;
+    margin: 6px;
+  }
+  .send{
+    margin-right: 10px;
+    margin-left: calc(max(auto,6px));
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    color : blue;
+    cursor: pointer;
+    border-color: blue;
+    background-color: #fff;
+    border-style: solid;
+  }
+  .send:hover{
+    background-color: blue;
+    color: #fff;
+    border-color: #fff;
+    border-style: solid;
+  }
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 865px) {
+    .topnav2 a:not(:first-child) {display: none;}
+    .topnav2 a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 865px) {
+    .topnav2.responsive {position: relative;}
+    .topnav2.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav2.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  @media only screen and (max-width: 865px) {
+    body {
+      background-image: url("../images/chatbg2.png");
+    }
+    .window {
+        width: 70%;
+        margin-left:15%;
+    }
+  }
