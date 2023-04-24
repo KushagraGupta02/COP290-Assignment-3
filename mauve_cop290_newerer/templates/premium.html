@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+/* Importing fonts from Google */
+<!-- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); -->
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #caa8f5;
+}
+
+.wrapper {
+    
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 8px 13px 20px #d1cbd0, -8px -13px 20px rgb(126, 94, 170);
+}
+
+.place{
+    
+    max-width: 350px;
+    min-height: 50px;
+    margin: 30px auto;
+    padding: 20px 20px 20px 20px;
+    background-color: #1c6e8c;
+    color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.logo {
+    width: 80px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0%;
+    <!-- box-shadow: 0px 0px 3px #5f5f5f,
+        0px 0px 0px 5px #ecf0f3,
+        8px 8px 15px #a7aaa7,
+        -8px -8px 15px #fff; -->
+}
+
+.wrapper .name {
+    
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+    /* border: 1px solid red; */
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+    box-shadow: inset 2px 2px 2px #cbced1, inset -2px -2px 2px #fff;
+}
+
+.wrapper .form-field .fas {
+    color: #555;
+}
+
+.wrapper .btn {
+    font-size: 1.0rem;
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #5823AE;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+    background-color: #5823AE;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: #5823AE;
+}
+
+.wrapper a:hover {
+    color: #5823AE;
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+    }
+}
+body {
+    background-color: #CAA8F5;
+  }
+
+  /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #D81E5B;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 865px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 865px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+ /* Add a black background color to the top navigation */
+ .topnav2 {
+    background-color: #D81E5B;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav2 a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav2 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav2 a.active {
+    color: #Ddd;
+    background-color: #1c6e8c;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav2 .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 865px) {
+    .topnav2 a:not(:first-child) {display: none;}
+    .topnav2 a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 865px) {
+    .topnav2.responsive {position: relative;}
+    .topnav2.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav2.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  body{margin-top:20px;}
+.our_pricing {
+    background-image: url(https://www.bootdey.com/image/280x280/9370DB/000000);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    margin-top:120px;
+    padding:20px;
+}
+
+@media only screen and (max-width:480px) {
+    .our_pricing {
+        background-size: auto;
+    }
+}
+
+.pricingTable {
+    background: #fff none repeat scroll 0 0;
+    color: #232434;
+    margin-top: 30px;
+    padding: 50px 15px;
+    -webkit-box-shadow: 0px 19px 43px 0px rgba(17, 17, 17, 0.05);
+    box-shadow: 0px 19px 43px 0px rgba(17, 17, 17, 0.05);
+    -webkit-perspective: 700px;
+    perspective: 700px;
+    position: relative;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    z-index: 1;
+}
+
+@media only screen and (max-width:480px) {
+    .pricingTable {
+        margin-bottom: 60px;
+    }
+}
+
+.pricingTabletop {
+    margin-top: -30px;
+}
+
+.pricingTable .pricingTable-header {}
+
+.pricingTable .title {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.pricingTable .price-month {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.pricingTable .price-value {
+    font-size: 170px;
+    line-height: 112px;
+    position: relative;
+    color: #e4f1ff;
+    margin: 40px 0;
+}
+
+@media only screen and (max-width:768px) {
+    .pricingTable .price-value {
+        font-size: 130px;
+    }
+}
+
+.pricingTable .price-value .value-bg {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    color: #1386fc;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.pricingTable-2 .price-value {
+    color: #e6e4ff;
+}
+
+.pricingTable-2 .price-value .value-bg {
+    color: #7564e5;
+}
+
+.pricingTable .pricing-content {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.pricing-content-border {}
+
+.pricing-content-border>li {
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.pricingTable .pricing-content li {
+    line-height: 40px;
+}
+
+@media only screen and (max-width: 990px) {
+    .pricingTable {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .pricingTable {
+        margin-bottom: 50px;
+    }
+}
+
+.btn-price-bg {
+    background: #7564e5;
+    border: 2px solid #7564e5;
+    border-radius: 5000px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 12px 40px;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.pricingTable:hover .btn-price-bg {
+    background: #232434;
+    color: #fff;
+    border: 2px solid #232434;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+h1.section-title-white {
+    color: #fff;
+}
+.section-title h1 {
+    font-size: 44px;
+    font-weight: 500;
+    margin-top: 0;
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+p.section-title-white {
+    color: #fff;
+}
+.section-title p {
+    padding: 0 10px;
+    width: 70%;
+    margin: auto;
+    letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav" id="myTopnav">
+        <a href="./home" >Home</a>
+        <a href="./friends" >Friends</a>
+        <a href="./sports">Sports</a>
+        <a href="./finance">Finance</a>
+        <a href="./stem">STEM</a>
+        <a href="./travel">Travel</a>
+        <a href="./entertainment" >Entertainment</a>
+        <a href="./others">Others</a>
+        <a href="./settings" class="active">Settings</a>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="topnav2" id="myTopnav2">
+        <a href="./settings" >Account Settings</a>
+        <a href="./manageFriends">Manage Friends</a>
+        <a href="./chats">Chats</a>
+        <a href="./premium"class="active">Premium</a>
+        <a href="./help" >Help</a>
+        <a href="./logout"  >Logout</a>
+        <a href="./delete">Delete Account</a>
+  
+        <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <section id="pricing" class="our_pricing section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h1 class="section-title-white">Premium and Pricing plans</h1>
+                    <p class="section-title-white">Following are the three pricing plans for premium and business</p>
+                </div>				
+                <div class="col-xs-12 col-sm-4 col-lg-4">
+                    <div class="pricingTable pricingTable-2">
+                        <div class="pricingTable-header">
+                            <h3 class="title">Standard</h3>
+                            <h5 class="price-month">Per Month</h5>
+                            <h1 class="price-value">10 <span class="value-bg">$10</span></h1>							
+                        </div>
+                        <ul class="pricing-content">
+                            <li>Data limit upto 15 GB</li>
+                            <li>5 Subdomains</li>
+                            <li>No advertisements</li>
+                            <li>Unlimited Support</li>
+                        </ul>
+                        <a href="./help" class="btn btn-lg btn-price-bg">Buy Now</a>
+                    </div>
+                </div><!-- END COL  -->
+                <div class="col-xs-12 col-sm-4 col-lg-4">
+                    <div class="pricingTable pricingTabletop pricingTable-2">
+                        <div class="pricingTable-header">
+                            <h3 class="title">Business</h3>
+                            <h5 class="price-month">Per Month</h5>
+                            <h1 class="price-value">20 <span class="value-bg">$20</span></h1>		
+                        </div>
+                        <ul class="pricing-content">
+                            <li>Data limit upto 50 GB</li>
+                            <li>10 Subdomains</li>
+                            <li>Limited Advertisements</li>
+                            <li>Unlimited Support</li>
+                        </ul>
+                        <a href="./help" class="btn btn-lg btn-price-bg">Buy Now</a>
+                    </div>
+                </div><!-- END COL  -->
+                <div class="col-xs-12 col-sm-4 col-lg-4">
+                    <div class="pricingTable pricingTable-2">
+                        <div class="pricingTable-header">
+                            <h3 class="title">Premium</h3>
+                            <h5 class="price-month">Per Month</h5>
+                            <h1 class="price-value">30 <span class="value-bg">$30</span></h1>		
+                        </div>
+                        <ul class="pricing-content">
+                            <li>Data limit upto 200 GB</li>
+                            <li>20 Subdomains</li>
+                            <li>Premium advertisements</li>
+                            <li>Unlimited Premium Support</li>
+                        </ul>
+                        <a href="./help" class="btn btn-lg btn-price-bg">Buy Now</a>
+                    </div>
+                </div><!-- END COL  -->
+            </div><!--END  ROW  -->
+        </div><!-- END CONTAINER  -->
+        
+    </section>
+    <br>
+    
+    <div class="text-center fs-6">
+        <center>
+            <h2><a href="./help">Wish to buy? Contact Us </a></h2>
+        </center>
+    </div>
+    <br><br><br><br>
+    <!-- </div> -->
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      function myFunction2() {
+        var x = document.getElementById("myTopnav2");
+        if (x.className === "topnav2") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav2";
+        }
+      }
+    </script>
+</body>
+
+</html>
