@@ -236,7 +236,7 @@ def user():
     custom_text="Hello, Your OTP to verify on mauve is "
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.starttls()
-    google_app_password = "vdaontrdrykabjpy"
+    google_app_password = "gm"
     server.login(sender,google_app_password)
     otp = str(randint(100000,999999))
     msg = custom_text +  otp
