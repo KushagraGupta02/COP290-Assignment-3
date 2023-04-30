@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 		<title>Contact us</title>
 <style>
 /* Importing fonts from Google */
@@ -29,6 +32,7 @@ body {
 @font-face {
   font-family: "Montserrat-SemiBold";
   src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf"); }
+  font-family: 'Montserrat', sans-serif;
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -200,6 +204,69 @@ button {
       -webkit-transform: translateX(4px);
       transform: translateX(4px); }
 
+      a.button {
+        border: none;
+        width: 162px;
+        height: 51px;
+        border: 2px solid #fff;
+        margin: auto;
+        margin-top: 60px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "Montserrat-SemiBold";
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        position: relative;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s; }
+        a.button i {
+          margin-left: 10px;
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+          -webkit-transition-property: transform;
+          transition-property: transform;
+          -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out; }
+        a.button:before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #2098D1;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+          -webkit-transition-property: transform;
+          transition-property: transform;
+          -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out; }
+        a.button:hover {
+          border-color: transparent; }
+          a.button:hover:before {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+          a.button:hover i {
+            -webkit-transform: translateX(4px);
+            transform: translateX(4px); }
+
+
+
 @media (max-width: 767px) {
   h3 {
     font-size: 38px; }
@@ -355,7 +422,7 @@ body {
 <body>
     <div class="topnav" id="myTopnav">
       <a href="./home" >Home</a>
-          <a href="./friends">Friends</a>
+      <a href="./gotoPost" >Post</a>          <a href="./friends">Friends</a>
           <a href="./sports">Sports</a>
           <a href="./finance">Finance</a>
           <a href="./stem">STEM</a>
@@ -398,26 +465,9 @@ body {
               <div class="inner">
                 <form action="">
                   <h3><span style="font-family: Montserrat">Contact Us</span></h3>
-                  <p>Need help. Contact us using the form below!</p>
-                  <label class="form-group">
-                    <input type="text" class="form-control"  required>
-                    <span>Your Name</span>
-                    <span class="border"></span>
-                  </label>
-                  <label class="form-group">
-                    <input type="text" class="form-control"  required>
-                    <span for="">Your Mail</span>
-                    <span class="border"></span>
-                  </label>
-                  <label class="form-group" >
-                    <textarea name="" id="" class="form-control" required></textarea>
-                    <span for="">Your Message</span>
-                    <span class="border"></span>
-                  </label>
-                  <button type="button" role="button" id="submit">
-                    <span style="font-family: Montserrat">Submit </span>
-                    <i class="zmdi zmdi-arrow-right"></i>
-                  </button>
+                  <p>Need help. Contact us!</p>
+                  <a href="mailto:mauve.iitd@gmail.com" target="_blank" class="button"><span style="font-family: Montserrat">Email Us</a>
+                    <a href="tel:+916392735719" target="_blank" class="button"><span style="font-family: Montserrat">Call Us</a>
                 </form>
               </div>
             </div>

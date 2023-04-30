@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="topnav" id="myTopnav">
           <a href="./home" >Home</a>
-            <a href="./friends" >Friends</a>
+          <a href="./gotoPost" >Post</a>            <a href="./friends" >Friends</a>
             <a href="./sports">Sports</a>
             <a href="./finance">Finance</a>
             <a href="./stem">STEM</a>
@@ -29,7 +29,7 @@
         <div class="topnav2" id="myTopnav2">
             <a href="./settings"  >Account Settings</a>
             <a href="./manageFriends"class="active">Manage Friends</a>
-            <a href="./chats" >Chats</a>
+            <a href="/viewChats/{{friends[0][1]}}" >Chats</a>
             <a href="./premium">Premium</a>
             <a href="./help">Help</a>
             <a href="./logout">Logout</a>
@@ -49,9 +49,11 @@
             {% for friend in friends %}
               <div class="leftmsg" id="{{friend[1]}}">
                 <h3>{{friend[1]}}</h3>
-                <button class="chat" role="button" id="chat" name="chat">Chat</button>
+                <form method="GET" action="/viewChats/{{friend[1]}}">
+                  <button class="chat" role="button" id="chat_{{friend[1]}}" type="submit" name="chat_{{friend[1]}}" >Chat</button>
+                </form>
                 <form method="GET" action="/removeFriend/{{friend[1]}}">
-                  <button class="chat" role="button" id="chat" type="submit" name="remove_{{friend[1]}}" >Remove</button>
+                  <button class="chat" role="button" id="rem_{{friend[1]}}" type="submit" name="remove_{{friend[1]}}" >Remove</button>
                 </form>
               </div>
             {% endfor %}

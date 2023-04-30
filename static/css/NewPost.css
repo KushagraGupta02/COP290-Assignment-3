@@ -124,6 +124,11 @@
     display: flex;
 }
 
+.titlebox2 {
+  padding-left: 25px;
+  padding-right: 15px;
+  margin: 5px;
+}
 .categories{
     padding-left: 25px;
 }

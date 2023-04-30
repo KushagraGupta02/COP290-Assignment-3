@@ -1,0 +1,732 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+
+body {
+    /* Add image */
+    background-image: url("../static/images/newbg4.png");
+
+    /* Make image center */
+    background-position: center center;
+
+    /* Make image fixed */
+    background-attachment: fixed;
+
+    /* Not repeat images */
+    background-repeat: no-repeat;
+
+    /* Set background size auto */
+    background-size: cover;
+    overflow: scroll;
+    
+  }
+
+  .chat{
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .card{
+                height: 80%;
+                border-radius: 15px !important;
+                background-color: rgba(0,0,0,0.4) !important;
+            }
+            .contacts_body{
+                padding:  0.75rem 0 !important;
+                overflow-y: auto;
+                white-space: nowrap;
+            }
+            .msg_card_body{
+                overflow-y: auto;
+            }
+            .card-header{
+                border-radius: 15px 15px 0 0 !important;
+                border-bottom: 0 !important;
+            }
+         .card-footer{
+            border-radius: 0 0 15px 15px !important;
+                border-top: 0 !important;
+        }
+            .container{
+                align-content: center;
+            }
+            .search{
+                border-radius: 15px 0 0 15px !important;
+                background-color: rgba(0,0,0,0.3) !important;
+                border:0 !important;
+                color:white !important;
+            }
+            .search:focus{
+                 box-shadow:none !important;
+               outline:0px !important;
+            }
+            .type_msg{
+                background-color: rgba(0,0,0,0.3) !important;
+                border:0 !important;
+                color:white !important;
+                height: 60px !important;
+                overflow-y: auto;
+            }
+                .type_msg:focus{
+                 box-shadow:none !important;
+               outline:0px !important;
+               width: 80%;
+            }
+            .attach_btn{
+        border-radius: 15px 0 0 15px !important;
+        background-color: rgba(0,0,0,0.3) !important;
+                border:0 !important;
+                color: white !important;
+                cursor: pointer;
+            }
+            .send_btn{
+        border-radius: 0 15px 15px 0 !important;
+        background-color: rgba(0,0,0,0.3) !important;
+                border:0 !important;
+                color: white !important;
+                cursor: pointer;
+            }
+            .search_btn{
+                border-radius: 0 15px 15px 0 !important;
+                background-color: rgba(0,0,0,0.3) !important;
+                border:0 !important;
+                color: white !important;
+                cursor: pointer;
+            }
+            .contacts{
+                list-style: none;
+                padding: 0;
+            }
+            .contacts li{
+                width: 100% !important;
+                padding: 5px 10px;
+                margin-bottom: 15px !important;
+            }
+        .active{
+                background-color: rgba(0,0,0,0.3);
+        }
+            .user_img{
+                height: 70px;
+                width: 70px;
+                border:1.5px solid #f5f6fa;
+            
+            }
+            .user_img_msg{
+                height: 40px;
+                width: 40px;
+                border:1.5px solid #f5f6fa;
+            
+            }
+        .img_cont{
+                position: relative;
+                height: 70px;
+                width: 70px;
+        }
+        .img_cont_msg{
+                height: 40px;
+                width: 40px;
+        }
+        .online_icon{
+            position: absolute;
+            height: 15px;
+            width:15px;
+            background-color: #4cd137;
+            border-radius: 50%;
+            bottom: 0.2em;
+            right: 0.4em;
+            border:1.5px solid white;
+        }
+        .offline{
+            background-color: #c23616 !important;
+        }
+        .user_info{
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 15px;
+        }
+        .user_info span{
+            font-size: 20px;
+            color: white;
+        }
+        .user_info p{
+        font-size: 10px;
+        color: rgba(255,255,255,0.6);
+        }
+        .video_cam{
+            margin-left: 50px;
+            margin-top: 5px;
+        }
+        .video_cam span{
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .msg_cotainer{
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 10px;
+            border-radius: 25px;
+            background-color: #82ccdd;
+            padding: 10px;
+            position: relative;
+        }
+        .msg_cotainer_send{
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 10px;
+            border-radius: 25px;
+            background-color: #78e08f;
+            padding: 10px;
+            position: relative;
+        }
+        .msg_time{
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            color: rgba(255,255,255,0.5);
+            font-size: 10px;
+        }
+        .msg_time_send{
+            position: absolute;
+            right:0;
+            bottom: -15px;
+            color: rgba(255,255,255,0.5);
+            font-size: 10px;
+        }
+        .msg_head{
+            position: relative;
+        }
+        #action_menu_btn{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .action_menu{
+            z-index: 1;
+            position: absolute;
+            padding: 15px 0;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border-radius: 15px;
+            top: 30px;
+            right: 15px;
+            display: none;
+        }
+        .action_menu ul{
+            list-style: none;
+            padding: 0;
+        margin: 0;
+        }
+        .action_menu ul li{
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+        }
+        .action_menu ul li i{
+            padding-right: 10px;
+        
+        }
+        .action_menu ul li:hover{
+            cursor: pointer;
+            background-color: rgba(0,0,0,0.2);
+        }
+        @media(max-width: 576px){
+        .contacts_card{
+            margin-bottom: 15px !important;
+        }
+        }
+
+  /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    z-index: 3;
+  }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #D81E5B;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  .postrectangle {
+    background: linear-gradient(to right, #332249, #3f1654, #1f0a48);
+    color: rgba(250, 250, 250, 0.8);
+    border-radius: 15px;
+    width: 75%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+    padding: 20px;
+
+  }
+  
+  .postrectangle p {
+    margin: 0 0 0.25em;
+  }
+
+
+  .window {
+    width: 55%;
+    height: fit-content;
+    background-color: #e6d4ff;
+    margin-top: 30px;
+    margin-left: 22.5%;
+    margin-bottom: 35px;
+    padding: 12px;
+    padding-bottom: 5px;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow:  2px 2px 6px #dbb4fd,
+                 -2px -2px 6px #ae7cf9;
+  }
+
+  .contain{
+    padding: 5px;
+    display: flex;
+    width:100%;
+    justify-content: center;
+    margin-bottom: 15px;
+
+  }
+
+  .loadmore {
+    background-color: transparent;
+    border: 1px solid #266DB6;
+    box-sizing: border-box;
+    color: #00132C;
+    font-family: "Avenir Next LT W01 Bold",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    left : 45%;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .loadmore:hover,
+  .loadmore:active {
+    outline: 0;
+  }
+  
+  .loadmore:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  .loadmore:before {
+    background-color: #D5EDF6;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .loadmore:hover:before {
+    background-color: #6DCFF6;
+  }
+
+  .button-54 {
+    font-family: "Open Sans", sans-serif;
+    margin-left:11%;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+.image {
+    overflow: hidden; /* hide any overflow from the image */
+  }
+  
+.image img {
+    float: left;
+    width: 33%; /* set image width to 50% of container width */
+    height: auto; /* maintain aspect ratio of image */
+    margin-right: 1em; /* add a small margin to the right of the image */
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  .leftmsg {
+    background-color: #f5ff89;
+    width: 75%;
+    word-wrap: break-word;
+    border-radius: 15px;
+    border-color: #333;
+    border-style: solid;
+    padding: 8px;
+    margin-left: 5px;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .rightmsg {
+    background-color: rgb(216, 180, 255);
+    width: 75%;
+    word-wrap: break-word;
+    border-radius: 15px;
+    border-color: #333;
+    border-style: solid;
+    padding: 8px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  .newmsg {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-top: #333;
+    border-style: solid;
+    padding: 3px;
+    background-color: #fff;
+  }
+  .msgbox{
+    border-radius: 5px;
+    width: 90%;
+    margin: 6px;
+  }
+  .send{
+    margin-right: 10px;
+    margin-left: calc(max(auto,6px));
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    color : blue;
+    cursor: pointer;
+    border-color: blue;
+    background-color: #fff;
+    border-style: solid;
+  }
+  .send:hover{
+    background-color: blue;
+    color: #fff;
+    border-color: #fff;
+    border-style: solid;
+  }
+
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 865px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 865px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  @media only screen and (max-width: 865px) {
+    body {
+      background-image: url("../images/newbg3.png");
+    }
+  }
+
+  @media (min-width: 768px) {
+    .loadmore {
+      padding: 16px 32px;
+    }
+  }
+        </style>
+    </head>
+    <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="topnav" id="myTopnav">
+          <a href="../home" >Home</a>
+          <a href="./gotoPost" >Post</a>          <a href="../friends">Friends</a>
+          <a href="../sports">Sports</a>
+          <a href="../finance">Finance</a>
+          <a href="../stem">STEM</a>
+          <a href="../travel">Travel</a>
+          <a href="../entertainment" >Entertainment</a>
+          <a href="../others">Others</a>
+          <a href="../settings">Settings</a>
+          
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        {% for post in posts %}
+        <div class="post">
+          <div class="dropdown">
+            <button class="dropbtn">Language</button>
+            <div class="dropdown-content">
+              <a class="dropdown-item" id="EN" href="#">EN</a>
+              <a class="dropdown-item" id="FR" href="#">FR</a>
+              <a class="dropdown-item" id="DE" href="#">DE</a>
+            </div>
+          </div>
+            <div class="postrectangle">
+              <h2>{{ post[3] }}</h2>
+              <div class="image">
+                {% if post[6] %}
+                <img border-radius = "5px" src="{{ url_for('static', filename='uploads/' + post[6]) }}" alt="Avatar">
+                {% else %}
+                {% endif %}
+                <p>{{ post[4] }}</p>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div> 
+          {% endfor %}
+
+            <!-- {% for chat in sentToMe %}
+              <div class="leftmsg" id="{{chat[0]}}">
+                <p><h3>{{chat[1]}} - {{chat[4]}}</h3></p>
+                <p> {{chat[3]}} </p>
+
+              </div>
+            {% endfor %}
+
+            {% for chat in sentByMe %}
+              <div class="rightmsg" id="{{chat[0]}}">
+                <p><h3>{{chat[1]}} - {{chat[4]}}</h3></p>
+                <p> {{chat[3]}} </p>
+
+              </div>
+            {% endfor %} -->
+
+            <div class="container-fluid h-100">
+              <div class="row justify-content-center h-100">
+                <div class="col-md-8 col-xl-6 chat">
+                  <div class="card">
+                    <div class="card-header msg_head">
+                      <div class="d-flex bd-highlight">
+                        <div class="user_info">
+                          <span>Comments</span>
+                        </div>
+        
+                      </div>
+                    </div>
+                    <div class="card-body msg_card_body">
+                                    {% for comment in comments %}
+                      <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                        </div>
+                        <div class="msg_cotainer">
+                          <p><u><h6>{{comment[1]}} </h6></u></p>
+                          <p><h5> {{comment[3]}} </h5></p>
+                          <span class="msg_time"></span>
+                        </div>
+                      </div>
+                                    {% endfor %}
+                      
+                    </div>
+                    <div class="card-footer">
+                      <div class="input-group">
+                                        <form method = "POST" action="/addComment/{{postID}}">
+                        <input style="width: 200%;" name="content" class="form-control type_msg" placeholder="Type your message..." type = "text">
+                                    </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+<!--         <button class="button-54" role="button">Read More</button>
+      </div>
+        <div class="postrectangle">
+            <p><h2> Second Post </h2></p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id aliquam ante. Donec iaculis risus a erat posuere, non scelerisque est luctus. Morbi eros enim, laoreet id accumsan vitae, tincidunt vel ligula. Suspendisse molestie, turpis a gravida pharetra, nisl nibh pellentesque eros, sed mattis ante mauris ut erat. Praesent porta, nibh quis hendrerit dignissim, ipsum elit elementum lectus, sed molestie lectus dolor ut quam. Vestibulum at magna vitae metus commodo tincidunt. Cras pulvinar id dui a sagittis. Mauris hendrerit velit ut imperdiet volutpat. Nulla facilisi. Nulla tincidunt tincidunt elit, ut tincidunt ligula faucibus id. Donec porta justo sed efficitur convallis. Donec bibendum nisl eu ex placerat, in ullamcorper quam gravida. In hac habitasse platea dictumst. Nullam elit mauris, tincidunt non sapien nec, consequat tincidunt felis. Suspendisse sem nisi, imperdiet id enim ac, bibendum feugiat dolor.
+            </p>
+             
+        </div>   
+
+        <div class="postrectangle">
+            <p><h2> Third Post </h2></p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id aliquam ante. Donec iaculis risus a erat posuere, non scelerisque est luctus. Morbi eros enim, laoreet id accumsan vitae, tincidunt vel ligula. Suspendisse molestie, turpis a gravida pharetra, nisl nibh pellentesque eros, sed mattis ante mauris ut erat. Praesent porta, nibh quis hendrerit dignissim, ipsum elit elementum lectus, sed molestie lectus dolor ut quam. Vestibulum at magna vitae metus commodo tincidunt. Cras pulvinar id dui a sagittis. Mauris hendrerit velit ut imperdiet volutpat. Nulla facilisi. Nulla tincidunt tincidunt elit, ut tincidunt ligula faucibus id. Donec porta justo sed efficitur convallis. Donec bibendum nisl eu ex placerat, in ullamcorper quam gravida. In hac habitasse platea dictumst. Nullam elit mauris, tincidunt non sapien nec, consequat tincidunt felis. Suspendisse sem nisi, imperdiet id enim ac, bibendum feugiat dolor.
+            </p>
+             
+        </div>   
+
+        <div class="postrectangle">
+            <p><h2> Fourth Post </h2></p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id aliquam ante. Donec iaculis risus a erat posuere, non scelerisque est luctus. Morbi eros enim, laoreet id accumsan vitae, tincidunt vel ligula. Suspendisse molestie, turpis a gravida pharetra, nisl nibh pellentesque eros, sed mattis ante mauris ut erat. Praesent porta, nibh quis hendrerit dignissim, ipsum elit elementum lectus, sed molestie lectus dolor ut quam. Vestibulum at magna vitae metus commodo tincidunt. Cras pulvinar id dui a sagittis. Mauris hendrerit velit ut imperdiet volutpat. Nulla facilisi. Nulla tincidunt tincidunt elit, ut tincidunt ligula faucibus id. Donec porta justo sed efficitur convallis. Donec bibendum nisl eu ex placerat, in ullamcorper quam gravida. In hac habitasse platea dictumst. Nullam elit mauris, tincidunt non sapien nec, consequat tincidunt felis. Suspendisse sem nisi, imperdiet id enim ac, bibendum feugiat dolor.
+            </p>
+             
+        </div>    
+        
+        <div class="postrectangle">
+            <p><h2> Fifth Post </h2></p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id aliquam ante. Donec iaculis risus a erat posuere, non scelerisque est luctus. Morbi eros enim, laoreet id accumsan vitae, tincidunt vel ligula. Suspendisse molestie, turpis a gravida pharetra, nisl nibh pellentesque eros, sed mattis ante mauris ut erat. Praesent porta, nibh quis hendrerit dignissim, ipsum elit elementum lectus, sed molestie lectus dolor ut quam. Vestibulum at magna vitae metus commodo tincidunt. Cras pulvinar id dui a sagittis. Mauris hendrerit velit ut imperdiet volutpat. Nulla facilisi. Nulla tincidunt tincidunt elit, ut tincidunt ligula faucibus id. Donec porta justo sed efficitur convallis. Donec bibendum nisl eu ex placerat, in ullamcorper quam gravida. In hac habitasse platea dictumst. Nullam elit mauris, tincidunt non sapien nec, consequat tincidunt felis. Suspendisse sem nisi, imperdiet id enim ac, bibendum feugiat dolor.
+            </p>
+             
+        </div>    -->
+
+
+
+        <div class="load">
+        
+        </div>
+        <script>
+
+
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+
+          var loadmore = document.getElementById("loadmore");
+          if (loadmore) {
+            loadmore.addEventListener("click", function (e) {
+              window.location.href = "./index.html";
+            });
+          }
+          var EN = document.getElementById("EN");
+          if (EN) {
+            EN.addEventListener("click", function (e) {
+              window.location.href = "../gotoPost";
+            });
+          }
+          var  FR = document.getElementById("FR");
+          if ( FR) {
+             FR.addEventListener("click", function (e) {
+              window.location.href = "../changetoFrench/{{postID}}";
+            });
+          }
+          var  DE = document.getElementById("DE");
+          if ( DE) {
+             DE.addEventListener("click", function (e) {
+              window.location.href = "../gotoPost";
+            });
+          }
+        </script>
+
+
+    </body>
+
+</html>

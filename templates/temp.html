@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+/* Importing fonts from Google */
+<!-- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); -->
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #caa8f5;
+}
+
+.wrapper {
+    
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 8px 13px 20px #d1cbd0, -8px -13px 20px rgb(126, 94, 170);
+}
+
+.place{
+    
+    max-width: 350px;
+    min-height: 50px;
+    margin: 30px auto;
+    padding: 20px 20px 20px 20px;
+    background-color: #1c6e8c;
+    color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.logo {
+    width: 80px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0%;
+    <!-- box-shadow: 0px 0px 3px #5f5f5f,
+        0px 0px 0px 5px #ecf0f3,
+        8px 8px 15px #a7aaa7,
+        -8px -8px 15px #fff; -->
+}
+
+.wrapper .name {
+    
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+    /* border: 1px solid red; */
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+    box-shadow: inset 2px 2px 2px #cbced1, inset -2px -2px 2px #fff;
+}
+
+.wrapper .form-field .fas {
+    color: #555;
+}
+
+.wrapper .btn {
+    font-size: 1.0rem;
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #5823AE;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+    background-color: #5823AE;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: #5823AE;
+}
+
+.wrapper a:hover {
+    color: #5823AE;
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+    }
+}
+  /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #D81E5B;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 865px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 865px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+ /* Add a black background color to the top navigation */
+ .topnav2 {
+    background-color: #D81E5B;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav2 a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav2 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav2 a.active {
+    color: #Ddd;
+    background-color: #1c6e8c;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav2 .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 865px) {
+    .topnav2 a:not(:first-child) {display: none;}
+    .topnav2 a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 865px) {
+    .topnav2.responsive {position: relative;}
+    .topnav2.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav2.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+.section-title {
+    margin-bottom: 60px;
+}
+
+h1.section-title-white {
+    color: #fff;
+}
+.section-title h1 {
+    font-size: 44px;
+    font-weight: 500;
+    margin-top: 0;
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+p.section-title-white {
+    color: #fff;
+}
+.section-title p {
+    padding: 0 10px;
+    width: 70%;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+
+$single-table-bg:#fff;
+$table-header:#fff;
+$table-border-color:lighten(#e67e22, 60%);
+$plan-price-color: #fff;
+$plan-price-month-color: #8394AE;
+$plan-price-border: lighten(#e67e22, 20%);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+    padding-top: 70px;
+}
+
+#pricing-tables {
+    background-color: #f2ede7;
+    padding: 30px 0;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    & .col-md-3,.col-sm-6,.col-xs-12 {
+        padding-right: 0;
+        padding-left: 0;
+        &:hover {
+            box-shadow: 0px 11px 30px 0px rgba(0, 0, 0, 0.75);
+            z-index: 2;
+            -webkit-transform: scale(1.06);
+            -ms-transform: scale(1.06);
+            -moz-transform: scale(1.06);
+            transform: scale(1.06);
+            border: 0;
+            -webkit-transition: 0.5s all;
+            transition: 0.5s all;
+            border: none;
+        }
+    }
+}
+
+.single-table {
+    background: $single-table-bg;
+    -webkit-transition: all 0.20s linear;
+    transition: all 0.20s linear;
+    z-index: 1;
+    & .plan-header {
+        background: #e67e22;
+        color: $table-header;
+        text-transform: capitalize;
+        padding: 2px 0;
+        & h3 {
+            margin: 0;
+            padding: 20px 0 5px 0;
+            text-transform: uppercase;
+        }
+    }
+
+    & .plan-price {
+        display: inline-block;
+        color: #e67e22;
+        margin: 0 0 10px 0;
+        font-size: 25px;
+        font-weight: bold;
+        background: #fff;
+        border-radius: 50%;
+        color: #e67e22;
+        padding: 33px 15px;
+        & span {
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+    & ul {
+        margin: 0;
+        padding: 20px 0;
+        list-style: none;
+        & li {
+            padding: 8px 0;
+            margin: 0 20px;
+            border-bottom: 1px solid $table-border-color;
+            font-size: 15px;
+        }
+    }
+    & .plan-submit {
+        display: inline-block;
+        text-decoration: none;
+        margin: 20px 0 30px 0;
+        padding: 10px 40px;
+        border: 1px solid #e67e22;
+        color: #e67e22;
+        font-size: 15px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        -webkit-transition: all .25s linear;
+        -moz-transition: all .25s linear;
+        -ms-transition: all .25s linear;
+        -o-transition: all .25s linear;
+        transition: all .25s linear;
+        &:hover {
+            background: #e67e22;
+            color: #FFF;
+            -webkit-transition: all .25s linear;
+            -moz-transition: all .25s linear;
+            -ms-transition: all .25s linear;
+            -o-transition: all .25s linear;
+            transition: all .25s linear;
+        }
+    }
+
+    /* Bubble Float Right */
+    .hvr-bubble-float-right {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+    }
+    .hvr-bubble-float-right:before {
+        position: absolute;
+        z-index: -1;
+        top: calc(50% - 10px);
+        right: 0;
+        content: '';
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent transparent;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+    }
+    .hvr-bubble-float-right:hover,
+    .hvr-bubble-float-right:focus,
+    .hvr-bubble-float-right:active {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    .hvr-bubble-float-right:hover:before,
+    .hvr-bubble-float-right:focus:before,
+    .hvr-bubble-float-right:active:before {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        border-color: transparent transparent transparent #e67e22;
+    }
+    
+}
+
+.color-2 {
+    & .single-table .plan-header{
+        background: #3498db;
+        color: $table-header;
+        & .plan-price{
+            color:#3498db;
+            background: #fff;
+        }
+
+        
+        }
+    & .single-table .plan-submit{
+        border: 1px solid #3498db;
+        color: #3498db; 
+        &:hover{
+            background: #3498db;
+            color: #FFF;
+        }       
+    }
+
+
+    .hvr-bubble-float-right:hover:before,
+    .hvr-bubble-float-right:focus:before,
+    .hvr-bubble-float-right:active:before {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        border-color: transparent transparent transparent #3498db;
+    }
+
+}
+
+
+.color-3 {
+    & .single-table .plan-header{
+        background: #2ecc71;
+        color: $table-header;
+        & .plan-price{
+            color:#2ecc71;
+            background: #fff;
+        }
+
+        
+        }
+    & .single-table .plan-submit{
+        border: 1px solid #2ecc71;
+        color: #2ecc71; 
+        &:hover{
+            background: #2ecc71;
+            color: #FFF;
+        }       
+    }
+
+  
+    .hvr-bubble-float-right:hover:before,
+    .hvr-bubble-float-right:focus:before,
+    .hvr-bubble-float-right:active:before {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        border-color: transparent transparent transparent #2ecc71;
+    }
+
+}
+
+
+
+.color-4 {
+    & .single-table .plan-header{
+        background: #FFE203;
+        color: $table-header;
+
+        & .plan-price{
+            color:#FFE203;
+            background: #fff;
+        }
+
+        
+        }
+    & .single-table .plan-submit{
+        border: 1px solid #804000;
+        color: #804000; 
+        &:hover{
+            background: #FFE203;
+            color: #FFF;
+        }       
+    }
+
+ 
+    .hvr-bubble-float-right:hover:before,
+    .hvr-bubble-float-right:focus:before,
+    .hvr-bubble-float-right:active:before {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        border-color: transparent transparent transparent #FFE203;
+    }
+
+}
+</style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <div class="topnav" id="myTopnav">
+        <a href="./home" >Home</a>
+        <a href="./post" >Post</a>
+        <a href="./friends" >Friends</a>
+        <a href="./sports">Sports</a>
+        <a href="./finance">Finance</a>
+        <a href="./stem">STEM</a>
+        <a href="./travel">Travel</a>
+        <a href="./entertainment" >Entertainment</a>
+        <a href="./others">Others</a>
+        <a href="./settings" class="active">Settings</a>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="topnav2" id="myTopnav2">
+        <a href="./settings" >Account Settings</a>
+        <a href="./manageFriends">Manage Friends</a>
+        <a href="./chats">Chats</a>
+        <a href="./premium"class="active">Patron</a>
+        <a href="./help" >Help</a>
+        <a href="./logout"  >Logout</a>
+        <a href="./delete">Delete Account</a>
+  
+        <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+       <!-- pricing table  -->
+    <section id="pricing-tables">
+        <div class="container">
+            <div class="col-md-3 col-sm-6 col-xs-12 color-1">
+                <div class="single-table text-center">
+                    <div class="plan-header">
+                        <h3>Gryffindor</h3>
+                        <img src="../static/images/Gryffindor_ClearBG.jpg" class="rounded-circle" alt="avatar1" width="140" height="140">
+                        <br>
+                        <br>
+                        <p><span style="color:white">Plan starts at </span></p>
+                        <h4 class="plan-price">₹450<span>/mo</span></h4>
+                    </div>
+                    <ul class="text-center">
+                        <li>Upload limit upto 500MB</li>
+                        <li>Premium advertisements</li>
+                        <li>Unlimited Premium Support</li>
+                        
+                    </ul>
+                    <a href="#" class="plan-submit hvr-bubble-float-right">buy now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 color-2">
+                <div class="single-table text-center">
+                    <div class="plan-header">
+                        <h3>Ravenclaw</h3>
+                        <img src="../static/images/RavenclawCrest.jpg" class="rounded-circle" alt="avatar1" width="140" height="140">
+                        <br>
+                        <br>
+                        <p><span style="color:white">Plan starts at </span></p>
+                        <h4 class="plan-price">₹300<span>/mo</span></h4>
+                        <br>
+                        
+                    </div>
+
+
+                    <ul class="text-center">
+                        <li>Upload limit upto 25MB</li>
+                            <li>No advertisements</li>
+                            <li>Unlimited Support</li>
+                            
+                        
+                    </ul>
+                    <a href="#" class="plan-submit hvr-bubble-float-right">buy now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 color-3">
+                <div class="single-table text-center">
+                    <div class="plan-header">
+                        <h3>Slytherin</h3>
+                        <img src="../static/images/Slytherin_ClearBG.jpg" class="rounded-circle" alt="avatar1" width="140" height="140">
+                        <br>
+                        <br>
+                        <p><span style="color:white">Plan starts at </span></p>
+                        <h4 class="plan-price">₹400<span>/mo</span></h4>
+                    </div>
+
+
+                    <ul class="text-center">
+                        <li>Upload Limit upto 100 MB</li>
+                        <li>Limited Advertisements</li>
+                        <li>Unlimited Support</li>
+                        <li> </li>
+                        <li> </li>
+                        
+                    </ul>
+                    <a href="#" class="plan-submit hvr-bubble-float-right">buy now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 color-4">
+                <div class="single-table text-center">
+                    <div class="plan-header">
+                        <h3>Hufflepuff</h3>
+                        <img src="../static/images/Hufflepuff_ClearBG.jpg" class="rounded-circle" alt="avatar1" width="140" height="140">
+                        <br>
+                        <br>
+                        <p><span style="color:white">Plan starts at </span></p>
+                        <h4 class="plan-price">₹375<span>/mo</span></h4>
+
+                    </div>
+
+
+                    <ul class="text-center">
+                        <li>Upload Limit upto 50 MB</li>
+                        <li>Limited Advertisements</li>
+                        <li>Unlimited Support</li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                    <a href="#" class="plan-submit hvr-bubble-float-right">buy now</a>
+                </div>
+            </div>
+      
+        </div>
+    </section>
+    <br>
+    
+    <div class="text-center fs-6">
+        <center>
+            <h2><a href="./help">Wish to buy? Contact Us </a></h2>
+        </center>
+    </div>
+    <br><br><br><br>
+    <!-- </div> -->
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      function myFunction2() {
+        var x = document.getElementById("myTopnav2");
+        if (x.className === "topnav2") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav2";
+        }
+      }
+    </script>
+</body>
+
+</html>

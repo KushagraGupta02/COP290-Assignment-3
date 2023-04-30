@@ -12,28 +12,28 @@
     <body>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="topnav" id="myTopnav">
-          <a href="./index.html" >Home</a>
-          <a href="./Friendsp.html">Friends</a>
-          <a href="./Sports.html">Sports</a>
-          <a href="./Finance.html">Finance</a>
-          <a href="./STEM.html">STEM</a>
-          <a href="./Travel.html">Travel</a>
-          <a href="./Entertainment.html">Entertainment</a>
-          <a href="./Miscellaneous.html">Others</a>
-          <a href="./accountsettings.html" class="active">Settings</a>
+          <a href="../home" >Home</a>
+          <a href="./gotoPost" >Post</a>          <a href="../friendsPosts" class="active">Friends</a>
+          <a href="../sports">Sports</a>
+          <a href="../finance">Finance</a>
+          <a href="../stem">STEM</a>
+          <a href="../travel">Travel</a>
+          <a href="../entertainment" >Entertainment</a>
+          <a href="../others">Others</a>
+          <a href="../settings" class="active" >Settings</a>
     
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>
         </div>
         <div class="topnav2" id="myTopnav2">
-            <a href="./settings"  >Account Settings</a>
-            <a href="./manageFriends">Manage Friends</a>
-            <a href="./chats" class="active">Chats</a>
-            <a href="./premium">Premium</a>
-            <a href="./help">Help</a>
-            <a href="./logout">Logout</a>
-            <a href="./delete">Delete Account</a>
+            <a href="../settings"  >Account Settings</a>
+            <a href="../manageFriends">Manage Friends</a>
+            <a href="../chats" class="active">Chats</a>
+            <a href="../premium">Premium</a>
+            <a href="../help">Help</a>
+            <a href="../logout">Logout</a>
+            <a href="../delete">Delete Account</a>
       
             <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
               <i class="fa fa-bars"></i>
@@ -46,34 +46,48 @@
                 <button class="loadmore2" role="button" id="loadmore2">Load more</button>
             </div>
             </div>
-            <div class="leftmsg" id="msg1">
-                <p><h3>Friend A</h3></p>
-                <p> Lorem ipsum dolor sit amet, </p>
+            <!-- {% for chat in sentToMe %}
+              <div class="leftmsg" id="{{chat[0]}}">
+                <p><h3>{{chat[1]}} - {{chat[4]}}</h3></p>
+                <p> {{chat[3]}} </p>
+
+              </div>
+            {% endfor %}
+
+            {% for chat in sentByMe %}
+              <div class="rightmsg" id="{{chat[0]}}">
+                <p><h3>{{chat[1]}} - {{chat[4]}}</h3></p>
+                <p> {{chat[3]}} </p>
+
+              </div>
+            {% endfor %} -->
+
+            {% for chat in ourChats %}
+            {% if chat[1] == friendname %}
+            <div class="leftmsg" id="{{chat[0]}}">
+              <u><h3>{{chat[1]}}</h3></u>
+              <p> {{chat[3]}} </p>
+              <h6 align = "right">{{chat[4]}}</h6>
+
             </div>
-            <div class="rightmsg" id="msg2">
-                <p><h3>You </h3></p>
-                <p> consectetur adipiscing elit. </p>
+            {% else %}
+            <div class="rightmsg" id="{{chat[0]}}">
+              <u><h3>{{chat[1]}}</h3></u>
+              <p> {{chat[3]}} </p>
+              <h6 align = "right">{{chat[4]}}</h6>
+
             </div>
-            <div class="leftmsg" id="msg1">
-                <p><h3>Friend A</h3></p>
-                <p> Maecenas id aliquam ante. </p>
-            </div>
-            <div class="rightmsg" id="msg2">
-                <p><h3>You </h3></p>
-                <p> Donec iaculis risus a erat posuere, </p>
-            </div>
-            <div class="rightmsg" id="msg2">
-                <p><h3>You </h3></p>
-                <p> non scelerisque est luctus. </p>
-            </div>
-            <div class="leftmsg" id="msg1">
-                <p><h3>Friend A</h3></p>
-                <p>Morbi eros enim, laoreet id accumsan vitae, tincidunt vel ligula. Suspendisse molestie, turpis a gravida pharetra, nisl nibh pellentesque eros, sed mattis ante mauris ut erat. Praesent porta, nibh quis hendrerit dignissim, ipsum elit elementum lectus, sed molestie lectus dolor ut quam. Vestibulum at magna vitae metus commodo tincidunt. Cras pulvinar id dui a sagittis. Mauris hendrerit velit ut imperdiet volutpat. Nulla facilisi. Nulla tincidunt tincidunt elit, ut tincidunt ligula faucibus id. Donec porta justo sed efficitur convallis. Donec bibendum nisl eu ex placerat, in ullamcorper quam gravida. In hac habitasse platea dictumst. Nullam elit mauris, tincidunt non sapien nec, consequat tincidunt felis. Suspendisse sem nisi, imperdiet id enim ac, bibendum feugiat dolor. </p>
-            </div>
-            <div class="newmsg">
-                <input type="text" class="msgbox" placeholder="Type a message" name="msg">
-                <button class="send" id="send" role="button">Send</button>
-            </div>
+            {% endif %}
+            {% endfor %}
+
+
+            <form method = "POST" action="/addChat/{{friendname}}">
+              <div class="newmsg">
+                  <input type="text" class="msgbox" placeholder="Type a message" name="content">
+                  <button class="send" id="send" role="button" type="submit">Send</button>
+              </div>
+            </form>
+
         </div>
         <script>
             /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */

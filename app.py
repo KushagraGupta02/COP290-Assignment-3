@@ -1,20 +1,25 @@
 # npx kill-port 5000
 import smtplib
 from random import randint
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 import smtplib
 from flask_mysqldb import MySQL
+from werkzeug.utils import secure_filename
+import os
+import requests
 
+def k(l):
+    return l[2]
 
 app = Flask(__name__)
-session={}
 # session['username']='12345678'
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'bros'
 app.config['MYSQL_PASSWORD'] = 'cop290@Mauve'
 app.config['MYSQL_DB'] = 'mauve'
-
+app.config['UPLOAD_FOLDER'] = '/home/baadalvm/Archive/static/uploads'
+app.secret_key = "gadida"
 mysql = MySQL(app)
 
 #1 HOME
@@ -36,11 +41,18 @@ def addPost():
     title = request.form.get('title')
     content = request.form.get('content')
     category = request.form.get('category')
-    likes=0
+    image = request.files['img']
 
-    cursor.execute('''INSERT INTO posts (postedBy, title, content, category, likes)
-                      VALUES (%s, %s, %s, %s, %s)''',
-                   (username, title, content, category, likes))
+    # Save the file to disk
+    if image:
+        imageData = secure_filename(image.filename)
+        image.save(os.path.join(app.config['UPLOAD_FOLDER'], imageData))
+    else:
+        imageData = None
+    likes=0
+    cursor.execute('''INSERT INTO posts (postedBy, title, content, category, likes,imageData)
+                      VALUES (%s, %s, %s, %s, %s, %s)''',
+                   (username, title, content, category, likes, imageData))
     
     mysql.connection.commit()
     cursor.close()
@@ -55,76 +67,188 @@ def abort(): return redirect('/home')
 
 @app.route('/friends')
 def friendsPost(): 
-    allPosts = []
+    posts = []
     if session : 
         cursor = mysql.connection.cursor()
         cursor.execute('''SELECT * FROM friends WHERE user1_id = %s ''', (session['username'],))
         friends = cursor.fetchall()
-        cursor.close()
         for friend in friends :
             cursor = mysql.connection.cursor()
             cursor.execute('''SELECT * FROM posts WHERE postedBy = %s ''', (friend[1],))
-            posts = cursor.fetchall()
-            cursor.close()
-            for post in posts :
-                allPosts.append(post)
-        return render_template('Friendsp.html', allPosts=allPosts)      
-
+            fposts = cursor.fetchall()
+            for fpost in fposts :
+                posts.append(fpost)
+        likes=[]
+        for post in posts:
+            cursor.execute('''SELECT * FROM likes WHERE likedBy = %s AND postID = %s ''',(session['username'],post[0]))
+            temp = cursor.fetchone()
+            if(temp):
+                likes.append(True)
+            else:
+                likes.append(False)
+        cursor.close()
+        double = [(posts[i],likes[i]) for i in range(len(posts))]
+        return render_template('Friendsp.html', posts=posts,double=double)
     else : return redirect('/gotologin')
+
+@app.route('/like/<category>/<postID>')
+def like(category,postID):
+    if not session:
+        return redirect('/gotologin')
+    cursor = mysql.connection.cursor()
+    cursor.execute('''INSERT INTO likes (likedBy, postID)
+                      VALUES (%s, %s)''',
+                   (session['username'], postID))
+    cursor.execute('''UPDATE posts SET likes = likes + 1 WHERE post_ID = %s''', (postID,))
+    mysql.connection.commit()
+    cursor.close()
+    return redirect(request.referrer)
+    
+@app.route('/unlike/<category>/<postID>')
+def unlike(category,postID):
+    if not session:
+        return redirect('/gotologin')
+    cursor = mysql.connection.cursor()
+    cursor.execute('''DELETE FROM likes WHERE likedBy = %s AND postID = %s''',
+                   (session['username'], postID))
+    cursor.execute('''UPDATE posts SET likes = likes - 1 WHERE post_ID = %s''', (postID,))
+    mysql.connection.commit()
+    cursor.close()
+    return redirect(request.referrer)
+    
+
 
 #4 SPORTS
 @app.route('/sports', methods = ['GET'])
 def renderSports():
     cursor = mysql.connection.cursor()
     cursor.execute('''SELECT * FROM posts WHERE category = "Sports" ''')
-    posts = cursor.fetchall()
+    posts = list(reversed(cursor.fetchall()))
+    likes=[]
+    if not session:
+        for post in posts:
+            likes.append(False)
+    else:
+        for post in posts:
+            cursor.execute('''SELECT * FROM likes WHERE likedBy = %s AND postID = %s ''',(session['username'],post[0]))
+            temp = cursor.fetchone()
+            if(temp):
+                likes.append(True)
+            else:
+                likes.append(False)
     cursor.close()
-    return render_template('Sports.html', posts=posts)
+    double = [(posts[i],likes[i]) for i in range(len(posts))]
+    return render_template('Sports.html', posts=posts,double=double)
 
 #5 FINANCE
 @app.route('/finance', methods = ['GET'])
 def renderFinance():
     cursor = mysql.connection.cursor()
     cursor.execute('''SELECT * FROM posts WHERE category = "Finance" ''')
-    posts = cursor.fetchall()
+    posts = list(reversed(cursor.fetchall()))
+    likes=[]
+    if not session:
+        for post in posts:
+            likes.append(False)
+    else:
+        for post in posts:
+            cursor.execute('''SELECT * FROM likes WHERE likedBy = %s AND postID = %s ''',(session['username'],post[0]))
+            temp = cursor.fetchone()
+            if(temp):
+                likes.append(True)
+            else:
+                likes.append(False)
     cursor.close()
-    return render_template('Finance.html', posts=posts)
+    double = [(posts[i],likes[i]) for i in range(len(posts))]
+    return render_template('Finance.html', posts=posts,double=double)
 
 #6 STEM
 @app.route('/stem', methods = ['GET'])
 def renderStem():
     cursor = mysql.connection.cursor()
     cursor.execute('''SELECT * FROM posts WHERE category = "STEM" ''')
-    posts = cursor.fetchall()
+    posts = list(reversed(cursor.fetchall()))
+    likes=[]
+    if not session:
+        for post in posts:
+            likes.append(False)
+    else:
+        for post in posts:
+            cursor.execute('''SELECT * FROM likes WHERE likedBy = %s AND postID = %s ''',(session['username'],post[0]))
+            temp = cursor.fetchone()
+            if(temp):
+                likes.append(True)
+            else:
+                likes.append(False)
     cursor.close()
-    return render_template('STEM.html', posts=posts)
+    double = [(posts[i],likes[i]) for i in range(len(posts))]
+    return render_template('STEM.html', posts=posts,double=double)
 
 #7 TRAVEL
 @app.route('/travel', methods = ['GET'])
 def renderTravel():
     cursor = mysql.connection.cursor()
     cursor.execute('''SELECT * FROM posts WHERE category = "Travel" ''')
-    posts = cursor.fetchall()
+    posts = list(reversed(cursor.fetchall()))
+    likes=[]
+    if not session:
+        for post in posts:
+            likes.append(False)
+    else:
+        for post in posts:
+            cursor.execute('''SELECT * FROM likes WHERE likedBy = %s AND postID = %s ''',(session['username'],post[0]))
+            temp = cursor.fetchone()
+            if(temp):
+                likes.append(True)
+            else:
+                likes.append(False)
     cursor.close()
-    return render_template('Travel.html', posts=posts)
+    double = [(posts[i],likes[i]) for i in range(len(posts))]
+    return render_template('Travel.html', posts=posts,double=double)
 
 #8 ENTERTAINMENT
 @app.route('/entertainment', methods = ['GET'])
 def renderEnt():
     cursor = mysql.connection.cursor()
     cursor.execute('''SELECT * FROM posts WHERE category = "Entertainment" ''')
-    posts = cursor.fetchall()
+    posts = list(reversed(cursor.fetchall()))
+    likes=[]
+    if not session:
+        for post in posts:
+            likes.append(False)
+    else:
+        for post in posts:
+            cursor.execute('''SELECT * FROM likes WHERE likedBy = %s AND postID = %s ''',(session['username'],post[0]))
+            temp = cursor.fetchone()
+            if(temp):
+                likes.append(True)
+            else:
+                likes.append(False)
     cursor.close()
-    return render_template('Entertainment.html', posts=posts)
+    double = [(posts[i],likes[i]) for i in range(len(posts))]
+    return render_template('Entertainment.html', posts=posts,double=double)
 
 #9 OTHERS
 @app.route('/others', methods = ['GET'])
 def renderOthers():
     cursor = mysql.connection.cursor()
     cursor.execute('''SELECT * FROM posts WHERE category = "Miscellaneous" ''')
-    posts = cursor.fetchall()
+    posts = list(reversed(cursor.fetchall()))
+    likes=[]
+    if not session:
+        for post in posts:
+            likes.append(False)
+    else:
+        for post in posts:
+            cursor.execute('''SELECT * FROM likes WHERE likedBy = %s AND postID = %s ''',(session['username'],post[0]))
+            temp = cursor.fetchone()
+            if(temp):
+                likes.append(True)
+            else:
+                likes.append(False)
     cursor.close()
-    return render_template('Miscellaneous.html', posts=posts)
+    double = [(posts[i],likes[i]) for i in range(len(posts))]
+    return render_template('Miscellaneous.html', posts=posts,double=double)
 
 #####  from 4 to 9, many lines of code can be reduced by making a helper function
 
@@ -155,6 +279,82 @@ def change():
 def gotologin():
     return render_template("login.html")
 
+@app.route('/search',methods=['GET'])
+def search():
+    query = "%"+request.args.get('query')+"%"
+    category = request.args.get('category')
+    sortBy = request.args.get('sortBy')
+    cursor = mysql.connection.cursor()
+    cursor.execute('''SELECT * FROM posts WHERE (LOWER(content) LIKE LOWER(%s) OR LOWER(title) LIKE LOWER(%s)) AND category = %s''',(query,query,category))
+    posts = list(reversed(cursor.fetchall()))
+    if sortBy == 'TimeD':
+        posts = posts
+    elif sortBy == 'TimeA':
+        posts = list(reversed(posts))
+    else:
+        posts.sort(key = k, reverse=True)
+    likes=[]
+    if not session:
+        for post in posts:
+            likes.append(False)
+    else:
+        for post in posts:
+            cursor.execute('''SELECT * FROM likes WHERE likedBy = %s AND postID = %s ''',(session['username'],post[0]))
+            temp = cursor.fetchone()
+            if(temp):
+                likes.append(True)
+            else:
+                likes.append(False)
+    cursor.close()
+    double = [(posts[i],likes[i]) for i in range(len(posts))]
+    return render_template(category+'.html', posts=posts,double=double)
+
+@app.route('/changetoFrench/<postID>',methods = ['GET'])
+def changeLang(postID):
+    cursor = mysql.connection.cursor()
+    cursor.execute('''SELECT * FROM posts WHERE post_ID = %s ''',(postID,))
+    posts = list(reversed(cursor.fetchall()))
+    cursor.execute('''SELECT * FROM comments WHERE postID = %s''', (postID,))
+    comments = cursor.fetchall()
+    cursor.close()
+
+    url = "https://microsoft-translator-text.p.rapidapi.com/translate"
+
+    querystring = {"to[0]":"fr","api-version":"3.0","profanityAction":"NoAction","textType":"plain"}
+    
+    payload = [{ "Text": posts[0][4] }]
+    headers = {
+	    "content-type": "application/json",
+	    "X-RapidAPI-Key": "fd5f6cf641msh9a196fa763c90c2p1df8e5jsnaef9523c3962",
+	    "X-RapidAPI-Host": "microsoft-translator-text.p.rapidapi.com"
+    }
+
+    response = requests.post(url, json=payload, headers=headers, params=querystring)
+    posts[0] = (posts[0][0],posts[0][1],posts[0][2],posts[0][3],response.json()[0]['translations'][0]['text'],posts[0][5],posts[0][6])
+
+    return render_template('SinglePost.html', posts=posts, comments=comments, postID = postID)
+
+@app.route('/singlePost/<postID>',methods = ['GET'])
+def renderPost(postID):
+    cursor = mysql.connection.cursor()
+    cursor.execute('''SELECT * FROM posts WHERE post_ID = %s ''',(postID,))
+    posts = reversed(cursor.fetchall())
+    cursor.execute('''SELECT * FROM comments WHERE postID = %s''', (postID,))
+    comments = cursor.fetchall()
+    cursor.close()
+    return render_template('SinglePost.html', posts=posts, comments=comments, postID = postID)
+
+@app.route("/addComment/<postID>",methods = ["POST"])
+def addComment(postID):
+    if session:
+        cursor = mysql.connection.cursor()
+        content = request.form.get('content')
+        cursor.execute('''INSERT INTO comments (sentBy, postID, content) VALUES (%s, %s, %s ) ''', (session['username'],postID,content))
+        mysql.connection.commit()
+        cursor.close()
+        return redirect("/singlePost/"+postID)
+    else:
+        return redirect('/gotologin')
 
 @app.route('/login', methods = ['POST'])
 def login():
@@ -236,7 +436,7 @@ def user():
     custom_text="Hello, Your OTP to verify on mauve is "
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.starttls()
-    google_app_password = "gm"
+    google_app_password = "vdaontrdrykabjpy"
     server.login(sender,google_app_password)
     otp = str(randint(100000,999999))
     msg = custom_text +  otp
@@ -326,7 +526,7 @@ def createPost():
 def renderPosts():
     cursor = mysql.connection.cursor()
     cursor.execute("SELECT * FROM posts")
-    posts = cursor.fetchall()
+    posts = reversed(cursor.fetchall())
     cursor.close()
     return render_template('feed.html', posts=posts)
 
@@ -378,17 +578,45 @@ def addFriend():
     # session['username'] = username
     return redirect('/manageFriends')
 
-@app.route("/chats")
-def chats():
-    return render_template("Chats.html")
+@app.route("/viewChats/<friendname>")
+def viewChats(friendname):
+    cursor = mysql.connection.cursor()
+    cursor.execute('''SELECT * FROM chats WHERE sentBy = %s AND sentTo = %s ''', (session['username'],friendname))
+    sentByMe = cursor.fetchall()
+    cursor.execute('''SELECT * FROM chats WHERE sentBy = %s AND sentTo = %s ''', (friendname,session['username']))
+    sentToMe = cursor.fetchall()
+    cursor.execute('''SELECT * FROM chats WHERE (sentBy = %s AND sentTo = %s) OR (sentBy = %s AND sentTo = %s)''', (friendname,session['username'],session['username'],friendname))
+    ourChats = cursor.fetchall()
+    cursor.execute('''SELECT * FROM friends where user1_id = %s''',(session['username'],))
+    friends=cursor.fetchall()
+    cursor.close()
+    return render_template("Chats2.html", friends = friends, friendname=friendname, sentToMe=sentToMe, sentByMe = sentByMe,ourChats=ourChats)
+
+@app.route("/addChat/<friendname>",methods = ["POST"])
+def addChat(friendname):
+    cursor = mysql.connection.cursor()
+    content = request.form.get('content')
+    cursor.execute('''INSERT INTO chats (sentBy, sentTo, content) VALUES (%s, %s, %s ) ''', (session['username'],friendname,content))
+    mysql.connection.commit()
+    cursor.close()
+    return redirect("/viewChats/"+friendname)
+
 
 @app.route("/premium")
 def premium():
-    return render_template("Premium.html")
+    return render_template("premium.html")
 
 @app.route("/help")
 def help():
-    return render_template("Help.html")
+    return render_template("help.html")
+
+@app.route("/chats")
+def seeChats():
+    cursor = mysql.connection.cursor()
+    username=session['username']
+    cursor.execute('''SELECT * FROM friends where user1_id = %s''',(username,))
+    friend=cursor.fetchone()
+    return redirect("/viewChats/"+friend[1])
 
 @app.route('/removeFriend/<friendname>')
 def removeFriend(friendname):
@@ -434,7 +662,7 @@ def removeFriend(friendname):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host = '10.17.6.13', port = 5000)
 
 
         # Insert form data into database

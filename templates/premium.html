@@ -126,10 +126,6 @@ body {
         padding: 40px 15px 15px 15px;
     }
 }
-body {
-    background-color: #CAA8F5;
-  }
-
   /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
@@ -245,154 +241,6 @@ body {
       text-align: left;
     }
   }
-  body{margin-top:20px;}
-.our_pricing {
-    background-image: url(https://www.bootdey.com/image/280x280/9370DB/000000);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    position: relative;
-    margin-top:120px;
-    padding:20px;
-}
-
-@media only screen and (max-width:480px) {
-    .our_pricing {
-        background-size: auto;
-    }
-}
-
-.pricingTable {
-    background: #fff none repeat scroll 0 0;
-    color: #232434;
-    margin-top: 30px;
-    padding: 50px 15px;
-    -webkit-box-shadow: 0px 19px 43px 0px rgba(17, 17, 17, 0.05);
-    box-shadow: 0px 19px 43px 0px rgba(17, 17, 17, 0.05);
-    -webkit-perspective: 700px;
-    perspective: 700px;
-    position: relative;
-    text-align: center;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -o-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-    z-index: 1;
-}
-
-@media only screen and (max-width:480px) {
-    .pricingTable {
-        margin-bottom: 60px;
-    }
-}
-
-.pricingTabletop {
-    margin-top: -30px;
-}
-
-.pricingTable .pricingTable-header {}
-
-.pricingTable .title {
-    display: block;
-    font-size: 24px;
-    font-weight: 600;
-    text-transform: capitalize;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -o-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.pricingTable .price-month {
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 5px;
-}
-
-.pricingTable .price-value {
-    font-size: 170px;
-    line-height: 112px;
-    position: relative;
-    color: #e4f1ff;
-    margin: 40px 0;
-}
-
-@media only screen and (max-width:768px) {
-    .pricingTable .price-value {
-        font-size: 130px;
-    }
-}
-
-.pricingTable .price-value .value-bg {
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    color: #1386fc;
-    font-weight: 600;
-    font-size: 60px;
-    line-height: 60px;
-}
-
-.pricingTable-2 .price-value {
-    color: #e6e4ff;
-}
-
-.pricingTable-2 .price-value .value-bg {
-    color: #7564e5;
-}
-
-.pricingTable .pricing-content {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-
-.pricing-content-border {}
-
-.pricing-content-border>li {
-    border: 1px solid #eee;
-    margin-bottom: 10px;
-}
-
-.pricingTable .pricing-content li {
-    line-height: 40px;
-}
-
-@media only screen and (max-width: 990px) {
-    .pricingTable {
-        margin-bottom: 30px;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .pricingTable {
-        margin-bottom: 50px;
-    }
-}
-
-.btn-price-bg {
-    background: #7564e5;
-    border: 2px solid #7564e5;
-    border-radius: 5000px;
-    color: #fff;
-    display: inline-block;
-    font-size: 16px;
-    overflow: hidden;
-    padding: 12px 40px;
-    text-transform: capitalize;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-.pricingTable:hover .btn-price-bg {
-    background: #232434;
-    color: #fff;
-    border: 2px solid #232434;
-}
-
 .section-title {
     margin-bottom: 60px;
 }
@@ -417,13 +265,262 @@ p.section-title-white {
     margin: auto;
     letter-spacing: 1px;
 }
+
+
+$single-table-bg:#fff;
+$table-header:#fff;
+$table-border-color:lighten(#e67e22, 60%);
+$plan-price-color: #fff;
+$plan-price-month-color: #8394AE;
+$plan-price-border: lighten(#e67e22, 20%);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+    padding-top: 70px;
+}
+
+#pricing-tables {
+    background-color: #f2ede7;
+    padding: 30px 0;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    & .col-md-3,.col-sm-6,.col-xs-12 {
+        padding-right: 0;
+        padding-left: 0;
+        &:hover {
+            box-shadow: 0px 11px 30px 0px rgba(0, 0, 0, 0.75);
+            z-index: 2;
+            -webkit-transform: scale(1.06);
+            -ms-transform: scale(1.06);
+            -moz-transform: scale(1.06);
+            transform: scale(1.06);
+            border: 0;
+            -webkit-transition: 0.5s all;
+            transition: 0.5s all;
+            border: none;
+        }
+    }
+}
+
+.single-table {
+    background: $single-table-bg;
+    -webkit-transition: all 0.20s linear;
+    transition: all 0.20s linear;
+    z-index: 1;
+    & .plan-header {
+        background: #e67e22;
+        color: $table-header;
+        text-transform: capitalize;
+        padding: 2px 0;
+        & h3 {
+            margin: 0;
+            padding: 20px 0 5px 0;
+            text-transform: uppercase;
+        }
+    }
+
+    & .plan-price {
+        display: inline-block;
+        color: #e67e22;
+        margin: 0 0 10px 0;
+        font-size: 25px;
+        font-weight: bold;
+        background: #fff;
+        border-radius: 50%;
+        color: #e67e22;
+        padding: 33px 15px;
+        & span {
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+    & ul {
+        margin: 0;
+        padding: 20px 0;
+        list-style: none;
+        & li {
+            padding: 8px 0;
+            margin: 0 20px;
+            border-bottom: 1px solid $table-border-color;
+            font-size: 15px;
+        }
+    }
+    & .plan-submit {
+        display: inline-block;
+        text-decoration: none;
+        margin: 20px 0 30px 0;
+        padding: 10px 40px;
+        border: 1px solid #e67e22;
+        color: #e67e22;
+        font-size: 15px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        -webkit-transition: all .25s linear;
+        -moz-transition: all .25s linear;
+        -ms-transition: all .25s linear;
+        -o-transition: all .25s linear;
+        transition: all .25s linear;
+        &:hover {
+            background: #e67e22;
+            color: #FFF;
+            -webkit-transition: all .25s linear;
+            -moz-transition: all .25s linear;
+            -ms-transition: all .25s linear;
+            -o-transition: all .25s linear;
+            transition: all .25s linear;
+        }
+    }
+
+    /* Bubble Float Right */
+    .hvr-bubble-float-right {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+    }
+    .hvr-bubble-float-right:before {
+        position: absolute;
+        z-index: -1;
+        top: calc(50% - 10px);
+        right: 0;
+        content: '';
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent transparent;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+    }
+    .hvr-bubble-float-right:hover,
+    .hvr-bubble-float-right:focus,
+    .hvr-bubble-float-right:active {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    .hvr-bubble-float-right:hover:before,
+    .hvr-bubble-float-right:focus:before,
+    .hvr-bubble-float-right:active:before {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        border-color: transparent transparent transparent #e67e22;
+    }
+    
+}
+
+.color-2 {
+    & .single-table .plan-header{
+        background: #3498db;
+        color: $table-header;
+        & .plan-price{
+            color:#3498db;
+            background: #fff;
+        }
+
+        
+        }
+    & .single-table .plan-submit{
+        border: 1px solid #3498db;
+        color: #3498db; 
+        &:hover{
+            background: #3498db;
+            color: #FFF;
+        }       
+    }
+
+
+    .hvr-bubble-float-right:hover:before,
+    .hvr-bubble-float-right:focus:before,
+    .hvr-bubble-float-right:active:before {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        border-color: transparent transparent transparent #3498db;
+    }
+
+}
+
+
+.color-3 {
+    & .single-table .plan-header{
+        background: #2ecc71;
+        color: $table-header;
+        & .plan-price{
+            color:#2ecc71;
+            background: #fff;
+        }
+
+        
+        }
+    & .single-table .plan-submit{
+        border: 1px solid #2ecc71;
+        color: #2ecc71; 
+        &:hover{
+            background: #2ecc71;
+            color: #FFF;
+        }       
+    }
+
+  
+    .hvr-bubble-float-right:hover:before,
+    .hvr-bubble-float-right:focus:before,
+    .hvr-bubble-float-right:active:before {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        border-color: transparent transparent transparent #2ecc71;
+    }
+
+}
+
+
+
+.color-4 {
+    & .single-table .plan-header{
+        background: #FFE203;
+        color: $table-header;
+
+        & .plan-price{
+            color:#FFE203;
+            background: #fff;
+        }
+
+        
+        }
+    & .single-table .plan-submit{
+        border: 1px solid #804000;
+        color: #804000; 
+        &:hover{
+            background: #FFE203;
+            color: #FFF;
+        }       
+    }
+
+ 
+    .hvr-bubble-float-right:hover:before,
+    .hvr-bubble-float-right:focus:before,
+    .hvr-bubble-float-right:active:before {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        border-color: transparent transparent transparent #FFE203;
+    }
+
+}
 </style>
 </head>
 
 <body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <div class="topnav" id="myTopnav">
         <a href="./home" >Home</a>
+        <a href="./gotoPost" >Post</a>
         <a href="./friends" >Friends</a>
         <a href="./sports">Sports</a>
         <a href="./finance">Finance</a>
@@ -441,7 +538,7 @@ p.section-title-white {
         <a href="./settings" >Account Settings</a>
         <a href="./manageFriends">Manage Friends</a>
         <a href="./chats">Chats</a>
-        <a href="./premium"class="active">Premium</a>
+        <a href="./premium"class="active">Patron</a>
         <a href="./help" >Help</a>
         <a href="./logout"  >Logout</a>
         <a href="./delete">Delete Account</a>
@@ -450,64 +547,100 @@ p.section-title-white {
           <i class="fa fa-bars"></i>
         </a>
       </div>
-      <section id="pricing" class="our_pricing section-padding">
+       <!-- pricing table  -->
+    <section id="pricing-tables">
         <div class="container">
-            <div class="row">
-                <div class="section-title text-center">
-                    <h1 class="section-title-white">Premium and Pricing plans</h1>
-                    <p class="section-title-white">Following are the three pricing plans for premium and business</p>
-                </div>				
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <div class="pricingTable pricingTable-2">
-                        <div class="pricingTable-header">
-                            <h3 class="title">Standard</h3>
-                            <h5 class="price-month">Per Month</h5>
-                            <h1 class="price-value">10 <span class="value-bg">$10</span></h1>							
-                        </div>
-                        <ul class="pricing-content">
-                            <li>Data limit upto 15 GB</li>
-                            <li>5 Subdomains</li>
+            <div class="col-md-3 col-sm-6 col-xs-12 color-1">
+                <div class="single-table text-center">
+                    <div class="plan-header">
+                        <h3>Gryffindor</h3>
+                        <img src="../static/images/Gryffindor_ClearBG.jpg" class="rounded-circle" alt="avatar1" width="140" height="140">
+                        <br>
+                        <br>
+                        <p><span style="color:white">Plan starts at </span></p>
+                        <h4 class="plan-price">₹450<span>/mo</span></h4>
+                    </div>
+                    <ul class="text-center">
+                        <li>Upload limit upto 500MB</li>
+                        <li>Premium advertisements</li>
+                        <li>Unlimited Premium Support</li>
+                        
+                    </ul>
+                    <a href="#" class="plan-submit hvr-bubble-float-right">buy now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 color-2">
+                <div class="single-table text-center">
+                    <div class="plan-header">
+                        <h3>Ravenclaw</h3>
+                        <img src="../static/images/RavenclawCrest.jpg" class="rounded-circle" alt="avatar1" width="140" height="140">
+                        <br>
+                        <br>
+                        <p><span style="color:white">Plan starts at </span></p>
+                        <h4 class="plan-price">₹300<span>/mo</span></h4>
+                        <br>
+                        
+                    </div>
+
+
+                    <ul class="text-center">
+                        <li>Upload limit upto 25MB</li>
                             <li>No advertisements</li>
                             <li>Unlimited Support</li>
-                        </ul>
-                        <a href="./help" class="btn btn-lg btn-price-bg">Buy Now</a>
+                            
+                        
+                    </ul>
+                    <a href="#" class="plan-submit hvr-bubble-float-right">buy now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 color-3">
+                <div class="single-table text-center">
+                    <div class="plan-header">
+                        <h3>Slytherin</h3>
+                        <img src="../static/images/Slytherin_ClearBG.jpg" class="rounded-circle" alt="avatar1" width="140" height="140">
+                        <br>
+                        <br>
+                        <p><span style="color:white">Plan starts at </span></p>
+                        <h4 class="plan-price">₹400<span>/mo</span></h4>
                     </div>
-                </div><!-- END COL  -->
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <div class="pricingTable pricingTabletop pricingTable-2">
-                        <div class="pricingTable-header">
-                            <h3 class="title">Business</h3>
-                            <h5 class="price-month">Per Month</h5>
-                            <h1 class="price-value">20 <span class="value-bg">$20</span></h1>		
-                        </div>
-                        <ul class="pricing-content">
-                            <li>Data limit upto 50 GB</li>
-                            <li>10 Subdomains</li>
-                            <li>Limited Advertisements</li>
-                            <li>Unlimited Support</li>
-                        </ul>
-                        <a href="./help" class="btn btn-lg btn-price-bg">Buy Now</a>
+
+
+                    <ul class="text-center">
+                        <li>Upload Limit upto 100 MB</li>
+                        <li>Limited Advertisements</li>
+                        <li>Unlimited Support</li>
+                        <li> </li>
+                        <li> </li>
+                        
+                    </ul>
+                    <a href="#" class="plan-submit hvr-bubble-float-right">buy now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 color-4">
+                <div class="single-table text-center">
+                    <div class="plan-header">
+                        <h3>Hufflepuff</h3>
+                        <img src="../static/images/Hufflepuff_ClearBG.jpg" class="rounded-circle" alt="avatar1" width="140" height="140">
+                        <br>
+                        <br>
+                        <p><span style="color:white">Plan starts at </span></p>
+                        <h4 class="plan-price">₹375<span>/mo</span></h4>
+
                     </div>
-                </div><!-- END COL  -->
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <div class="pricingTable pricingTable-2">
-                        <div class="pricingTable-header">
-                            <h3 class="title">Premium</h3>
-                            <h5 class="price-month">Per Month</h5>
-                            <h1 class="price-value">30 <span class="value-bg">$30</span></h1>		
-                        </div>
-                        <ul class="pricing-content">
-                            <li>Data limit upto 200 GB</li>
-                            <li>20 Subdomains</li>
-                            <li>Premium advertisements</li>
-                            <li>Unlimited Premium Support</li>
-                        </ul>
-                        <a href="./help" class="btn btn-lg btn-price-bg">Buy Now</a>
-                    </div>
-                </div><!-- END COL  -->
-            </div><!--END  ROW  -->
-        </div><!-- END CONTAINER  -->
-        
+
+
+                    <ul class="text-center">
+                        <li>Upload Limit upto 50 MB</li>
+                        <li>Limited Advertisements</li>
+                        <li>Unlimited Support</li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                    <a href="#" class="plan-submit hvr-bubble-float-right">buy now</a>
+                </div>
+            </div>
+      
+        </div>
     </section>
     <br>
     
