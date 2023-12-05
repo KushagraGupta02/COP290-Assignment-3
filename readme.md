@@ -1,3 +1,4 @@
+```
 ssh baadalvm@10.17.6.13
 cop290@mauve
 cd mauve_cop290_newerer/
@@ -34,3 +35,4 @@ SHOW COLUMNS FROM users;
 CREATE TABLE posts ( post_ID INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, postedBy VARCHAR(100), likes INT, title VARCHAR(100), content VARCHAR(1000));
 ALTER TABLE users ADD COLUMN verified varchar(1) AFTER otp;
 ALTER TABLE users DROP COLUMN verified;
+```
